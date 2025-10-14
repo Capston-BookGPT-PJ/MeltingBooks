@@ -28,7 +28,7 @@
 - 목표 설정 및 진행 현황 확인
 
 <img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/c2d3647d-31a7-41d3-b42b-8b7312bd9ea4" />
-<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/0d106992-2f99-4177-b592-bf8bde4be053" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/cdbfdf48-49e8-42b4-b785-d844e01c6a89" />
 <img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/d8a22d91-db5a-441f-bb8c-d553274298a1" />
 
 
