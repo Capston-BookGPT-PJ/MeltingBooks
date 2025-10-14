@@ -27,7 +27,10 @@
 - 나만의 독서 로그 기록
 - 목표 설정 및 진행 현황 확인
 
-![독서 기록 화면](https://github.com/user-attachments/assets/ee69728a-b63b-4dde-ba75-cf37483483f0)
+<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/c2d3647d-31a7-41d3-b42b-8b7312bd9ea4" />
+<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/0d106992-2f99-4177-b592-bf8bde4be053" />
+<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/d8a22d91-db5a-441f-bb8c-d553274298a1" />
+
 
 ---
 
@@ -35,16 +38,20 @@
 - 감정 기반 요약 기능 제공
 - 음성/텍스트 입력 지원
 
-![감상문 작성 화면](https://github.com/user-attachments/assets/787dfa03-8a97-469f-9425-6b31ef190fdf)
+<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/cf0d0b44-ed2c-45c9-a0b9-943fba7a9078" />
+<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/eb2e840a-f506-4628-b42e-3489ab504660" />
+
+
 
 ---
 
 ### 3️⃣ 커뮤니티 기능
-- 피드, 그룹, 댓글, 좋아요로 소통
+- 피드, 그룹, 댓글, 좋아요, 팔로우로 소통
 
-<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/787dfa03-8a97-469f-9425-6b31ef190fdf" />
-<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/dcff4223-d38c-48a9-825a-63f1fd631e79" />
-<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/ee69728a-b63b-4dde-ba75-cf37483483f0" />
+<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/581100bc-10cb-4e3f-b106-79009f17a551" />
+<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/fac3852a-5bdd-4e15-b2df-f9ec8d307273" />
+<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/9e440767-e0e9-48be-8ef2-9bcabb3b1328" />
+
 ---
 
 ### 4️⃣ 독서 리포트
