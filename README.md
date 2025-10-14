@@ -123,7 +123,7 @@
 
 ---
 
-- 플래티넘 뱃지
+- 플래티넘 티어 뱃지
 
 <img width="300" height="300" alt="p-removebg-preview" src="https://github.com/user-attachments/assets/3e5321ae-179f-43c8-b4b2-d37a82f44967" />
 
