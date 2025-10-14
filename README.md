@@ -1,4 +1,4 @@
-# <img width="30" height="30" alt="image" src="https://github.com/user-attachments/assets/d125d03f-7263-4364-9e71-ade492a3db39" /> MeltingBooks
+# <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/d125d03f-7263-4364-9e71-ade492a3db39" /> MeltingBooks
 
 
 <img width="610" height="610" alt="meltingbooks_log" src="https://github.com/user-attachments/assets/17c32f21-37e3-43c0-a5ae-7d61e9a03b08" />
