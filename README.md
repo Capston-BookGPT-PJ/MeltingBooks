@@ -1,7 +1,6 @@
 # <img width="30" height="30" alt="image" src="https://github.com/user-attachments/assets/d125d03f-7263-4364-9e71-ade492a3db39" /> MeltingBooks
 
-<img width="610" height="610" alt="image" src="https://github.com/user-attachments/assets/18b7ef3e-00d2-4543-abf4-cf6eef9df103" />
-<img width="146" height="285" alt="image" src="https://github.com/user-attachments/assets/56a161c1-fec7-4c25-abf8-1d817c71217d" />
+<img width="600" height="1200" alt="image" src="https://github.com/user-attachments/assets/56a161c1-fec7-4c25-abf8-1d817c71217d" />
 
 
  
