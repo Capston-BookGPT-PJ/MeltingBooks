@@ -103,9 +103,9 @@
 ---
 
 ## 🤝 팀원
-- [엄예진]([링크](https://github.com/eomyejin20))  
-- [박상희]([링크](https://github.com/sangheeee-Park))  
-- [남해림]([링크](https://github.com/hr9919))  
+- [엄예진][링크](https://github.com/eomyejin20)  
+- [박상희][링크](https://github.com/sangheeee-Park)
+- [남해림][링크](https://github.com/hr9919)  
 
 ---
 
