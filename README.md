@@ -2,6 +2,7 @@
 
 
 <img width="610" height="610" alt="meltingbooks_log" src="https://github.com/user-attachments/assets/17c32f21-37e3-43c0-a5ae-7d61e9a03b08" />
+
 > 감상문 공유와 맞춤형 독서 관리로 꾸준한 독서 습관을 만들어주는 독서 관리 & SNS 커뮤니티 앱
 
 ---
