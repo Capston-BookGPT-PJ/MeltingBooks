@@ -37,16 +37,18 @@
 ### 2️⃣ 감상문 작성 지원
 - 감정 기반 요약 기능 제공
 - 음성/텍스트 입력 지원
+- 댓글, 좋아요, 수정/삭제 지원
 
 <img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/cf0d0b44-ed2c-45c9-a0b9-943fba7a9078" />
 <img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/eb2e840a-f506-4628-b42e-3489ab504660" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/f33ebabc-1704-4f0c-9193-55424c2c89d2" />
 
 
 
 ---
 
 ### 3️⃣ 커뮤니티 기능
-- 피드, 그룹, 댓글, 좋아요, 팔로우로 소통
+- 피드, 그룹, 팔로우로 소통
 
 <img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/581100bc-10cb-4e3f-b106-79009f17a551" />
 <img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/fac3852a-5bdd-4e15-b2df-f9ec8d307273" />
