@@ -74,7 +74,7 @@
 ## 🛠️ 기술 스택
 | 구분       | 기술                          |
 |------------|-------------------------------|
-| Front-end  | Android / Kotlin              |
+| Front-end  | Android / Java              |
 | Back-end   | Spring Boot, REST API         |
 | Database   | MySQL                         |
 | 기타       | Retrofit, Gson, STT 기반 음성 입력 등 |
@@ -103,9 +103,9 @@
 ---
 
 ## 🤝 팀원
-- [팀원1 이름](링크)  
-- [팀원2 이름](링크)  
-- [팀원3 이름](링크)  
+- [엄예진](링크)  
+- [박상희](링크)  
+- [남해림](링크)  
 
 ---
 
