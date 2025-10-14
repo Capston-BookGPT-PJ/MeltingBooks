@@ -1,6 +1,8 @@
 # <img width="30" height="30" alt="image" src="https://github.com/user-attachments/assets/d125d03f-7263-4364-9e71-ade492a3db39" /> MeltingBooks
 
 <img width="610" height="610" alt="image" src="https://github.com/user-attachments/assets/18b7ef3e-00d2-4543-abf4-cf6eef9df103" />
+<img width="146" height="285" alt="image" src="https://github.com/user-attachments/assets/56a161c1-fec7-4c25-abf8-1d817c71217d" />
+
 
  
 > 감상문 공유와 맞춤형 독서 관리로 꾸준한 독서 습관을 만들어주는 독서 관리 & SNS 커뮤니티 앱
@@ -26,6 +28,10 @@
 - **독서 리포트**: 독서 패턴과 성취 확인 가능  
 
 ![App Demo](https://via.placeholder.com/600x300)  
+<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/e55d08db-b0ed-4b0a-a046-75c4b1952c2e" />
+<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/35627c60-15f1-4080-91e9-d5b6f5d9ade4" />
+<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/07e1e435-b8f9-4673-b7f7-0c0380f7defc" />
+
 *예시 GIF: 독서 기록, 감상문 작성, 그룹 소통 화면*
 
 ---
