@@ -20,19 +20,42 @@
 ---
 
 ## 💡 주요 기능
-- **독서 기록 관리**: 나만의 독서 로그와 목표 설정  
-- **감상문 작성 지원**: 감정 기반 요약 기능 제공  
-- **커뮤니티 기능**: 피드, 그룹, 댓글, 좋아요로 소통  
-- **독서 리포트**: 독서 패턴과 성취 확인 가능  
 
-![App Demo](https://via.placeholder.com/600x300)  
+---
+
+### 1️⃣ 독서 기록 관리
+- 나만의 독서 로그 기록
+- 목표 설정 및 진행 현황 확인
+
+![독서 기록 화면](https://github.com/user-attachments/assets/ee69728a-b63b-4dde-ba75-cf37483483f0)
+
+---
+
+### 2️⃣ 감상문 작성 지원
+- 감정 기반 요약 기능 제공
+- 음성/텍스트 입력 지원
+
+![감상문 작성 화면](https://github.com/user-attachments/assets/787dfa03-8a97-469f-9425-6b31ef190fdf)
+
+---
+
+### 3️⃣ 커뮤니티 기능
+- 피드, 그룹, 댓글, 좋아요로 소통
 
 <img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/787dfa03-8a97-469f-9425-6b31ef190fdf" />
 <img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/dcff4223-d38c-48a9-825a-63f1fd631e79" />
 <img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/ee69728a-b63b-4dde-ba75-cf37483483f0" />
-*예시 GIF: 독서 기록, 감상문 작성, 그룹 소통 화면*
+---
+
+### 4️⃣ 독서 리포트
+- 독서 패턴과 성취 확인 가능
+- 차트와 통계 시각화 가능 (필요 시 GIF 활용)
+
+<!-- 예시 GIF -->
+<!-- ![독서 리포트 예시](https://github.com/user-attachments/assets/xxxxxx.gif) -->
 
 ---
+
 
 ## 🌟 차별점
 - 💡 감정 기반 감상문 분석 및 자동 요약 기능  
