@@ -1,6 +1,7 @@
 # 📚 MeltingBooks
 
-![MeltingBooks Logo](https://via.placeholder.com/150)  
+<img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/d125d03f-7263-4364-9e71-ade492a3db39" />
+ 
 > 감상문 공유와 맞춤형 독서 관리로 꾸준한 독서 습관을 만들어주는 독서 관리 & SNS 커뮤니티 앱
 
 ---
