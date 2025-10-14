@@ -115,11 +115,12 @@
 ---
 
 ## 🏅 뱃지 & 레벨
-- 브론즈, 실버, 골드, 플래티넘 티어 뱃지
+- 기본 브론즈, 실버, 골드 티어 뱃지
 <img width="300" height="300" alt="b-removebg-preview" src="https://github.com/user-attachments/assets/b6640aac-ed64-40e0-ab96-d16dea66f6c8" />
 <img width="300" height="300" alt="s-removebg-preview" src="https://github.com/user-attachments/assets/82dccb14-2217-4bab-ae64-794da33d07b7" />
 <img width="300" height="300" alt="g-removebg-preview" src="https://github.com/user-attachments/assets/0e4e0678-bef7-4415-a299-f92019590bd5" />
-<img width="300" height="300" alt="g-removebg-preview" src="https://github.com/user-attachments/assets/89e3de05-8f6f-4246-b545-fc897efb00c4" />
+- 프리미엄 플래티넘 티어 뱃지
+<img width="300" height="300" alt="p-removebg-preview" src="https://github.com/user-attachments/assets/3e5321ae-179f-43c8-b4b2-d37a82f44967" />
 
  
 ```
