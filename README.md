@@ -26,10 +26,10 @@
 - **독서 리포트**: 독서 패턴과 성취 확인 가능  
 
 ![App Demo](https://via.placeholder.com/600x300)  
-<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/e55d08db-b0ed-4b0a-a046-75c4b1952c2e" />
-<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/35627c60-15f1-4080-91e9-d5b6f5d9ade4" />
-<img width="200" height="400" alt="image" src="https://github.com/user-attachments/assets/07e1e435-b8f9-4673-b7f7-0c0380f7defc" />
 
+<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/787dfa03-8a97-469f-9425-6b31ef190fdf" />
+<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/dcff4223-d38c-48a9-825a-63f1fd631e79" />
+<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/ee69728a-b63b-4dde-ba75-cf37483483f0" />
 *예시 GIF: 독서 기록, 감상문 작성, 그룹 소통 화면*
 
 ---
