@@ -110,12 +110,16 @@
 ---
 
 ## 📅 개발 기간
-- 2025.08 ~ 2025.10  
+- 2024.09 ~ 2025.10  
 
 ---
 
-## 🏅 뱃지 & 링크 예시
-![GitHub Issues](https://img.shields.io/github/issues/username/MeltingBooks)  
-![GitHub Stars](https://img.shields.io/github/stars/username/MeltingBooks)  
-![GitHub License](https://img.shields.io/github/license/username/MeltingBooks)  
+## 🏅 뱃지 & 레벨
+- 브론즈, 실버, 골드, 플래티넘 티어 뱃지
+<img width="300" height="300" alt="b-removebg-preview" src="https://github.com/user-attachments/assets/b6640aac-ed64-40e0-ab96-d16dea66f6c8" />
+<img width="300" height="300" alt="s-removebg-preview" src="https://github.com/user-attachments/assets/82dccb14-2217-4bab-ae64-794da33d07b7" />
+<img width="300" height="300" alt="g-removebg-preview" src="https://github.com/user-attachments/assets/0e4e0678-bef7-4415-a299-f92019590bd5" />
+<img width="300" height="300" alt="g-removebg-preview" src="https://github.com/user-attachments/assets/89e3de05-8f6f-4246-b545-fc897efb00c4" />
+
+ 
 ```
