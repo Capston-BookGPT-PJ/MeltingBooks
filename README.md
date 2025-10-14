@@ -27,9 +27,9 @@
 - 나만의 독서 로그 기록
 - 목표 설정 및 진행 현황 확인
 
-<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/c2d3647d-31a7-41d3-b42b-8b7312bd9ea4" />
-<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/0d106992-2f99-4177-b592-bf8bde4be053" />
-<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/d8a22d91-db5a-441f-bb8c-d553274298a1" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/c2d3647d-31a7-41d3-b42b-8b7312bd9ea4" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/0d106992-2f99-4177-b592-bf8bde4be053" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/d8a22d91-db5a-441f-bb8c-d553274298a1" />
 
 
 ---
@@ -38,8 +38,8 @@
 - 감정 기반 요약 기능 제공
 - 음성/텍스트 입력 지원
 
-<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/cf0d0b44-ed2c-45c9-a0b9-943fba7a9078" />
-<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/eb2e840a-f506-4628-b42e-3489ab504660" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/cf0d0b44-ed2c-45c9-a0b9-943fba7a9078" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/eb2e840a-f506-4628-b42e-3489ab504660" />
 
 
 
@@ -48,9 +48,9 @@
 ### 3️⃣ 커뮤니티 기능
 - 피드, 그룹, 댓글, 좋아요, 팔로우로 소통
 
-<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/581100bc-10cb-4e3f-b106-79009f17a551" />
-<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/fac3852a-5bdd-4e15-b2df-f9ec8d307273" />
-<img width="300" height="650" alt="image" src="https://github.com/user-attachments/assets/9e440767-e0e9-48be-8ef2-9bcabb3b1328" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/581100bc-10cb-4e3f-b106-79009f17a551" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/fac3852a-5bdd-4e15-b2df-f9ec8d307273" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/9e440767-e0e9-48be-8ef2-9bcabb3b1328" />
 
 ---
 
@@ -117,15 +117,15 @@
 ## 🏅 뱃지 & 레벨
 - 브론즈, 실버, 골드 티어 뱃지
 
-<img width="300" height="300" alt="b-removebg-preview" src="https://github.com/user-attachments/assets/b6640aac-ed64-40e0-ab96-d16dea66f6c8" />
-<img width="300" height="300" alt="s-removebg-preview" src="https://github.com/user-attachments/assets/82dccb14-2217-4bab-ae64-794da33d07b7" />
-<img width="300" height="300" alt="g-removebg-preview" src="https://github.com/user-attachments/assets/0e4e0678-bef7-4415-a299-f92019590bd5" />
+<img width="250" height="300" alt="b-removebg-preview" src="https://github.com/user-attachments/assets/b6640aac-ed64-40e0-ab96-d16dea66f6c8" />
+<img width="250" height="300" alt="s-removebg-preview" src="https://github.com/user-attachments/assets/82dccb14-2217-4bab-ae64-794da33d07b7" />
+<img width="250" height="300" alt="g-removebg-preview" src="https://github.com/user-attachments/assets/0e4e0678-bef7-4415-a299-f92019590bd5" />
 
 ---
 
 - 플래티넘 티어 뱃지
 
-<img width="300" height="300" alt="p-removebg-preview" src="https://github.com/user-attachments/assets/3e5321ae-179f-43c8-b4b2-d37a82f44967" />
+<img width="250" height="300" alt="p-removebg-preview" src="https://github.com/user-attachments/assets/3e5321ae-179f-43c8-b4b2-d37a82f44967" />
 
  
 ```
