@@ -2,7 +2,6 @@
 
 
 <img width="500" height="500" alt="meltingbooks_log" src="https://github.com/user-attachments/assets/17c32f21-37e3-43c0-a5ae-7d61e9a03b08" />
-<img width="500" height="250" alt="image" src="https://github.com/user-attachments/assets/7915cde9-3817-4096-b36e-b9242834d331" />
 
 > 감상문 공유와 맞춤형 독서 관리로 꾸준한 독서 습관을 만들어주는 독서 관리 & SNS 커뮤니티 앱
 
@@ -17,6 +16,7 @@
 - 📖 감상문 공유로 꾸준한 독서 습관 지원  
 - ✍️ 감상문 작성 편의성과 기록 관리 제공  
 - 🏆 개인 맞춤 독서 리포트와 커뮤니티로 동기 부여
+<img width="500" height="250" alt="image" src="https://github.com/user-attachments/assets/7915cde9-3817-4096-b36e-b9242834d331" />
 
 ---
 
