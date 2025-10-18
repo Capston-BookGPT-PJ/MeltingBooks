@@ -238,13 +238,6 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.FeedViewHolder
 
         //더보기
         holder.readMore.setOnClickListener(v -> {
-            /*
-            Context context = v.getContext();
-            Intent intent = new Intent(v.getContext(), FeedDetailActivity.class);
-            intent.putExtra("postId", item.getPostId());
-            detailLauncher.launch(intent);
-
-             */
             Context context = v.getContext();
             Intent intent = new Intent(context, FeedDetailActivity.class);
             intent.putExtra("feedItem", item); // FeedItem 전달

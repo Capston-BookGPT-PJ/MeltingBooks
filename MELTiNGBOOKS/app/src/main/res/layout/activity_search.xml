@@ -6,7 +6,7 @@
     android:id="@+id/activity_search"
     android:orientation="vertical"
     android:background="@color/gray"
-    android:padding="16dp">
+    android:padding="6dp">
 
     <LinearLayout
         android:id="@+id/searchBar"

@@ -77,13 +77,31 @@ public abstract class BaseActivity extends AppCompatActivity {
             return false;
         });
 
-        // 뷰가 그려진 후 gradientCircle 위치 계산
         bottomNavigationView.getViewTreeObserver().addOnGlobalLayoutListener(() -> {
             int count = bottomNavigationView.getMenu().size();
             iconPositions = new int[count];
+
             for (int i = 0; i < count; i++) {
-                View itemView = bottomNavigationView.findViewById(bottomNavigationView.getMenu().getItem(i).getItemId());
-                iconPositions[i] = (int) itemView.getX() + (itemView.getWidth() / 2) - (gradientCircle.getWidth() / 2);
+                View itemView = bottomNavigationView.findViewById(
+                        bottomNavigationView.getMenu().getItem(i).getItemId()
+                );
+
+                // 아이콘 중심 X좌표
+                float iconCenterX = itemView.getX() + (itemView.getWidth() / 2f);
+                // gradientCircle의 중심을 아이콘 중심에 맞춤 (X)
+                float circleX = iconCenterX - (gradientCircle.getWidth() / 2f);
+
+                iconPositions[i] = Math.round(circleX);
+
+                // ---- Y 좌표 계산 ----
+                // 아이콘 뷰 자체의 높이 안에서 아이콘이 실제 어디에 있는지를 찾아야 함
+                ImageView iconView = itemView.findViewById(com.google.android.material.R.id.icon);
+
+                if (iconView != null) {
+                    float iconCenterY = itemView.getY() + iconView.getY() + (iconView.getHeight() / 2f);
+                    float circleY = iconCenterY - (gradientCircle.getHeight() / 2f);
+                    gradientCircle.setY(circleY);
+                }
             }
 
             // 현재 선택된 메뉴 위치 이동
@@ -93,9 +111,6 @@ public abstract class BaseActivity extends AppCompatActivity {
                 if (pos >= 0 && pos < iconPositions.length) {
                     gradientCircle.setX(iconPositions[pos]);
                     bottomNavigationView.setSelectedItemId(navId);
-                }
-                else {
-                    // -1이면 gradientCircle 위치도 변경하지 않고 메뉴 선택도 변경하지 않음
                 }
             }
         });

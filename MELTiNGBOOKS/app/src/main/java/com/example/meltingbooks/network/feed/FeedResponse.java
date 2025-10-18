@@ -37,7 +37,7 @@ public class FeedResponse  implements Serializable {
 
     // ✅ 추가된 필드
     private boolean likedByMe;          // JSON의 likedByMe
-    private List<String> likedUsers;    // JSON의 likedUsers
+    private List<LikedUser> likedUsers;    // JSON의 likedUsers
 
 
     // Getter
@@ -155,7 +155,22 @@ public class FeedResponse  implements Serializable {
     public void setLikedByMe(boolean likedByMe) { this.likedByMe = likedByMe; }
 
     // ✅ likedUsers Getter/Setter
-    public List<String> getLikedUsers() { return likedUsers; }
-    public void setLikedUsers(List<String> likedUsers) { this.likedUsers = likedUsers; }
+    public static class LikedUser {
+        private int id;
+        private String nickname;
+        private String profileImageUrl;
+
+        // Getter & Setter
+        public int getId() { return id; }
+        public void setId(int id) { this.id = id; }
+        public String getNickname() { return nickname; }
+        public void setNickname(String nickname) { this.nickname = nickname; }
+        public String getProfileImageUrl() { return profileImageUrl; }
+        public void setProfileImageUrl(String profileImageUrl) { this.profileImageUrl = profileImageUrl; }
+    }
+
+    public List<LikedUser> getLikedUsers() { return likedUsers; }
+    public void setLikedUsers(List<LikedUser> likedUsers) { this.likedUsers = likedUsers; }
 }
+
 

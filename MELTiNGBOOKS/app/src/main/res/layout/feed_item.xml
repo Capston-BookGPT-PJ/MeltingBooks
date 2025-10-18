@@ -158,9 +158,9 @@
                 android:textColor="@color/textColor"
                 android:layout_margin="2dp"
                 />
-             <!-- 빈 공간 (spacer) -->
+            <!-- 빈 공간 (spacer) -->
             <View
-                android:layout_width="220dp"
+                android:layout_width="190dp"
                 android:layout_height="16dp" />
 
             <!-- 더보기 -->

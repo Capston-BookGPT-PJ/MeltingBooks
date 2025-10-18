@@ -323,84 +323,58 @@ public class SearchActivity extends AppCompatActivity {
             HashtagController hashtagController = new HashtagController(token);
             hashtagController.fetchReviewsByHashtag(hashtag.getTag(), new Callback<ApiResponse<FeedPageResponse>>() {
                 @Override
-                public void onResponse(Call<ApiResponse<FeedPageResponse>> call,
-                                       Response<ApiResponse<FeedPageResponse>> response) {
+                public void onResponse(Call<ApiResponse<FeedPageResponse>> call, Response<ApiResponse<FeedPageResponse>> response) {
                     if (response.isSuccessful() && response.body() != null && response.body().isSuccess()) {
                         FeedPageResponse pageResponse = response.body().getData();
                         List<FeedResponse> hashtagReviews = (pageResponse != null && pageResponse.getContent() != null)
                                 ? pageResponse.getContent() : new ArrayList<>();
 
-                        // Feed API 호출 → 유저 정보 포함
-                        Call<ApiResponse<FeedPageResponse>> feedCall =
-                                apiService.getUserFeeds("Bearer " + token, userId, 0, 50);
+                        // FeedResponse → FeedItem 변환 (서버가 준 그대로)
+                        List<FeedItem> feedItems = new ArrayList<>();
+                        for (FeedResponse review : hashtagReviews) {
+                            FeedItem feedItem = new FeedItem(
+                                    review.getNickname(),
+                                    review.getContent(),
+                                    review.getFormattedCreatedAt(),
+                                    (review.getReviewImageUrls() != null && !review.getReviewImageUrls().isEmpty())
+                                            ? review.getReviewImageUrls().get(0)
+                                            : null,
+                                    review.getUserProfileImage(),
+                                    review.getBookId(),
+                                    review.getCommentCount(),
+                                    review.getLikeCount(),
+                                    review.getTagId(),
+                                    review.getHashtags(),
+                                    review.getRating(),
+                                    review.getUserId()
+                            );
+                            feedItem.setPostId(review.getReviewId());
+                            feedItem.setPostType("feed");
+                            feedItems.add(feedItem);
+                        }
 
-                        feedCall.enqueue(new Callback<ApiResponse<FeedPageResponse>>() {
-                            @Override
-                            public void onResponse(Call<ApiResponse<FeedPageResponse>> call,
-                                                   Response<ApiResponse<FeedPageResponse>> response) {
-                                if (response.isSuccessful() && response.body() != null && response.body().getData() != null) {
-                                    FeedPageResponse feedPage = response.body().getData();
-                                    List<FeedResponse> feeds = feedPage.getContent();
-                                    List<FeedItem> mappedFeeds = new ArrayList<>();
+                        // 어댑터 갱신
+                        reviewList2.clear();
+                        reviewList2.addAll(feedItems);
+                        reviewAdapter2.notifyDataSetChanged();
 
-                                    // reviewId 기준으로 hashtagReviews와 feed를 매핑
-                                    for (FeedResponse feed : feeds) {
-                                        for (FeedResponse hashtagReview : hashtagReviews) {
-                                            if (feed.getReviewId() == hashtagReview.getReviewId()) {
-                                                String firstImage = (feed.getReviewImageUrls() != null && !feed.getReviewImageUrls().isEmpty())
-                                                        ? feed.getReviewImageUrls().get(0)
-                                                        : null;
+                        // 리뷰 RecyclerView 보여주기
+                        reviewRecyclerView2.setVisibility(feedItems.isEmpty() ? View.GONE : View.VISIBLE);
 
-                                                FeedItem feedItem = new FeedItem(
-                                                        feed.getNickname(),
-                                                        feed.getContent(),
-                                                        feed.getFormattedCreatedAt(), // formatted 사용
-                                                        firstImage,
-                                                        feed.getUserProfileImage(),
-                                                        feed.getBookId(),
-                                                        feed.getCommentCount(),
-                                                        feed.getLikeCount(),
-                                                        feed.getTagId(),
-                                                        feed.getHashtags(),
-                                                        feed.getRating()
-                                                );
-                                                feedItem.setPostId(feed.getReviewId());
-                                                feedItem.setPostType("feed");
-
-                                                mappedFeeds.add(feedItem);
-                                                break;
-                                            }
-                                        }
-                                    }
-
-                                    // 📌 어댑터 갱신
-                                    reviewList2.clear();
-                                    reviewList2.addAll(mappedFeeds);
-                                    reviewAdapter2.notifyDataSetChanged();
-
-                                    // ✅ 리뷰 RecyclerView 보여주기
-                                    reviewRecyclerView2.setVisibility(mappedFeeds.isEmpty() ? View.GONE : View.VISIBLE);
-                                }
-                            }
-
-                            @Override
-                            public void onFailure(Call<ApiResponse<FeedPageResponse>> call, Throwable t) {
-                                Log.e("BrowseActivity", "Feed API 실패: " + t.getMessage());
-                            }
-                        });
+                        Log.d("BrowseActivity", "Hashtag " + hashtag.getTag() + " 리뷰 개수: " + feedItems.size());
                     }
                 }
 
                 @Override
                 public void onFailure(Call<ApiResponse<FeedPageResponse>> call, Throwable t) {
-                    Log.e("BrowseActivity", "해시태그 리뷰 불러오기 실패: " + t.getMessage());
+                    Log.e("BrowseActivity", "해시태그 리뷰 불러오기 실패", t);
                 }
             });
-
         });
 
 
-        // 검색 아이콘 클릭 시 실행
+
+            // 검색 아이콘 클릭 시 실행
         searchIcon.setOnClickListener(v -> performSearch());
 
         // 키보드에서 검색 버튼 눌렀을 때 실행
@@ -612,26 +586,26 @@ public class SearchActivity extends AppCompatActivity {
 
 
 // 인기순 리뷰 (책 제한 없음)
+// 인기순 리뷰 (책 제한 없음)
 private void fetchPopularReviews() {
-    Call<ApiResponse<FeedPageResponse>> feedCall =
-            apiService.getUserFeeds("Bearer " + token, userId, 0, 10); // 인기순 파라미터 없으면 전체 가져오기
+    // 전체 리뷰 가져오기
+    Call<ApiResponse<List<FeedResponse>>> feedCall = apiService.getAllReviews("Bearer " + token);
 
-    feedCall.enqueue(new Callback<ApiResponse<FeedPageResponse>>() {
+    feedCall.enqueue(new Callback<ApiResponse<List<FeedResponse>>>() {
         @Override
-        public void onResponse(Call<ApiResponse<FeedPageResponse>> call,
-                               Response<ApiResponse<FeedPageResponse>> response) {
-            if (response.isSuccessful() && response.body() != null && response.body().getData() != null) {
-                FeedPageResponse pageResponse = response.body().getData();
-                List<FeedResponse> feeds = pageResponse.getContent();
+        public void onResponse(Call<ApiResponse<List<FeedResponse>>> call, Response<ApiResponse<List<FeedResponse>>> response) {
+            if (response.isSuccessful() && response.body() != null && response.body().isSuccess()) {
+                List<FeedResponse> feeds = response.body().getData();
 
                 if (feeds == null || feeds.isEmpty()) {
                     reviewRecyclerView.setVisibility(View.GONE);
                     return;
                 }
 
-                // 📌 likeCount 내림차순 정렬 (인기순)
+                // likeCount 기준 내림차순 정렬 (인기순)
                 Collections.sort(feeds, (a, b) -> Integer.compare(b.getLikeCount(), a.getLikeCount()));
 
+                // FeedResponse → FeedItem 변환
                 List<FeedItem> mappedFeeds = new ArrayList<>();
                 for (FeedResponse feed : feeds) {
                     String firstImage = (feed.getReviewImageUrls() != null && !feed.getReviewImageUrls().isEmpty())
@@ -649,11 +623,11 @@ private void fetchPopularReviews() {
                             feed.getLikeCount(),
                             feed.getTagId(),
                             feed.getHashtags(),
-                            feed.getRating()
+                            feed.getRating(),
+                            feed.getUserId()
                     );
                     feedItem.setPostId(feed.getReviewId());
                     feedItem.setPostType("feed");
-
                     mappedFeeds.add(feedItem);
                 }
 
@@ -663,17 +637,20 @@ private void fetchPopularReviews() {
                 reviewAdapter.notifyDataSetChanged();
 
                 reviewRecyclerView.setVisibility(mappedFeeds.isEmpty() ? View.GONE : View.VISIBLE);
+                Log.d("Feed", "전체 인기 리뷰 개수: " + mappedFeeds.size());
+
             } else {
-                Log.e("Feed", "인기 리뷰 응답 비정상: " + response.message());
+                Log.e("Feed", "전체 인기 리뷰 응답 비정상: " + response.message());
             }
         }
 
         @Override
-        public void onFailure(Call<ApiResponse<FeedPageResponse>> call, Throwable t) {
-            Log.e("Feed", "인기 리뷰 불러오기 실패: " + t.getMessage());
+        public void onFailure(Call<ApiResponse<List<FeedResponse>>> call, Throwable t) {
+            Log.e("Feed", "전체 인기 리뷰 불러오기 실패: " + t.getMessage());
         }
     });
 }
+
 
 
 

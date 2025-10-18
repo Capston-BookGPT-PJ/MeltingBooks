@@ -163,7 +163,7 @@
                 android:textSize="12sp" />
             <!-- 빈 공간 (spacer) -->
             <View
-                android:layout_width="200dp"
+                android:layout_width="190dp"
                 android:layout_height="16dp" />
 
             <!-- 더보기 -->
@@ -189,4 +189,3 @@
             app:layout_constraintTop_toBottomOf="@id/iconContainer" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
-

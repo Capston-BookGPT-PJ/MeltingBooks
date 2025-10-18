@@ -27,7 +27,7 @@ public class NaverLoginCallbackActivity extends AppCompatActivity {
 
             if (token != null && userId != null) {
                 saveTokenAndUser(token, userId);
-                Toast.makeText(this, "네이버 로그인 성공: " + userId, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "네이버 로그인 성공: " + userId, Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "네이버 로그인 실패", Toast.LENGTH_SHORT).show();
             }

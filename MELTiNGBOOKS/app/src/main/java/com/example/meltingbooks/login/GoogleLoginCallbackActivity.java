@@ -27,7 +27,7 @@ public class GoogleLoginCallbackActivity extends AppCompatActivity {
 
             if (token != null) {
                 saveTokenAndUser(token,userId);
-                Toast.makeText(this, "로그인 성공: " + userId + token, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "로그인 성공: " + userId + token, Toast.LENGTH_SHORT).show();
                 //Log.d("CALLBACK", "받은 토큰: " + token); //토큰 확인용
             } else {
                 Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show();

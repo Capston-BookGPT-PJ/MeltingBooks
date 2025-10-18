@@ -89,7 +89,7 @@ public class FeedItem implements Serializable {
     //별점 추가 버전
     public FeedItem(String userName, String reviewContent, String reviewDate,
                     String imageUrl, String profileImageUrl, Integer bookId,
-                    int commentCount, int likeCount, String tagId, List<String> hashtags, Integer rating) {
+                    int commentCount, int likeCount, String tagId, List<String> hashtags, Integer rating, int userId) {
         this.userName = userName;
         this.reviewContent = reviewContent;
         this.reviewDate = reviewDate;
@@ -101,6 +101,7 @@ public class FeedItem implements Serializable {
         this.tagId = tagId;
         this.hashtags = hashtags;
         this.rating = rating;
+        this.userId = userId;
     }
 
     // 브라우징 리뷰 생성자

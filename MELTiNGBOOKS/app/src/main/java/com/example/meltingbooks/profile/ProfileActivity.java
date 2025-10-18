@@ -132,10 +132,10 @@ public class ProfileActivity extends BaseActivity {
             public void onChildViewAttachedToWindow(View view) {
                 // 좋아요/댓글/공유 관련 뷰 숨기기
                 view.findViewById(R.id.comment_button).setVisibility(View.GONE);
-                view.findViewById(R.id.comment_count).setVisibility(View.GONE);
-                view.findViewById(R.id.like_Button).setVisibility(View.GONE);
-                view.findViewById(R.id.like_count).setVisibility(View.GONE);
-                view.findViewById(R.id.share_Button).setVisibility(View.GONE);
+                view.findViewById(R.id.comment_count).setVisibility(View.INVISIBLE);
+                view.findViewById(R.id.like_Button).setVisibility(View.INVISIBLE);
+                view.findViewById(R.id.like_count).setVisibility(View.INVISIBLE);
+                view.findViewById(R.id.share_Button).setVisibility(View.INVISIBLE);
             }
 
             @Override
@@ -398,60 +398,60 @@ public class ProfileActivity extends BaseActivity {
             badgeContainer.addView(badgeView);
         }
     }
-  private void showBadgeDialog(BadgeCatalogResponse badge) {
-      if (badge == null) {
-          Log.w("BadgeDialog", "badge 데이터가 null입니다.");
-          return;
-      }
+    private void showBadgeDialog(BadgeCatalogResponse badge) {
+        if (badge == null) {
+            Log.w("BadgeDialog", "badge 데이터가 null입니다.");
+            return;
+        }
 
-      //null-safe 처리
-      String badgeType = badge.getBadgeType() != null ? badge.getBadgeType() : "UNKNOWN";
-      String tierText = badge.getTier() != null ? badge.getTier() : "미획득";
+        //null-safe 처리
+        String badgeType = badge.getBadgeType() != null ? badge.getBadgeType() : "UNKNOWN";
+        String tierText = badge.getTier() != null ? badge.getTier() : "미획득";
 
-      String title = getBadgeTitle(badgeType);
-      String desc = getBadgeDescription(badgeType, badge.getTier());
+        String title = getBadgeTitle(badgeType);
+        String desc = getBadgeDescription(badgeType, badge.getTier());
 
-      //유저가 해당 배지를 획득했는지 확인
-      String acquiredDate = null;
-      if (userBadges != null) {
-          for (UserResponse.Badge userBadge : userBadges) {
-              if (userBadge != null && userBadge.getBadgeType() != null &&
-                      userBadge.getBadgeType().equalsIgnoreCase(badgeType)) {
-                  acquiredDate = userBadge.getCreatedAt();
-                  break;
-              }
-          }
-      }
+        //유저가 해당 배지를 획득했는지 확인
+        String acquiredDate = null;
+        if (userBadges != null) {
+            for (UserResponse.Badge userBadge : userBadges) {
+                if (userBadge != null && userBadge.getBadgeType() != null &&
+                        userBadge.getBadgeType().equalsIgnoreCase(badgeType)) {
+                    acquiredDate = userBadge.getCreatedAt();
+                    break;
+                }
+            }
+        }
 
-      //날짜 포맷 변경 (ISO → yyyy-MM-dd HH:mm)
-      if (acquiredDate != null) {
-          try {
-              java.time.LocalDateTime dateTime = java.time.LocalDateTime.parse(
-                      acquiredDate, java.time.format.DateTimeFormatter.ISO_DATE_TIME
-              );
-              acquiredDate = dateTime.format(
-                      java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")
-              );
-          } catch (Exception e) {
-              Log.w("BadgeDialog", "날짜 포맷 변환 실패: " + e.getMessage());
-          }
-      }
+        //날짜 포맷 변경 (ISO → yyyy-MM-dd HH:mm)
+        if (acquiredDate != null) {
+            try {
+                java.time.LocalDateTime dateTime = java.time.LocalDateTime.parse(
+                        acquiredDate, java.time.format.DateTimeFormatter.ISO_DATE_TIME
+                );
+                acquiredDate = dateTime.format(
+                        java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")
+                );
+            } catch (Exception e) {
+                Log.w("BadgeDialog", "날짜 포맷 변환 실패: " + e.getMessage());
+            }
+        }
 
-      //메시지 구성
-      StringBuilder message = new StringBuilder(desc != null ? desc : "배지 설명이 없습니다.");
-      if (acquiredDate != null) {
-          message.append("\n\n🏅 획득일: ").append(acquiredDate);
-      } else {
-          message.append("\n\n아직 획득하지 않았습니다.");
-      }
+        //메시지 구성
+        StringBuilder message = new StringBuilder(desc != null ? desc : "배지 설명이 없습니다.");
+        if (acquiredDate != null) {
+            message.append("\n\n🏅 획득일: ").append(acquiredDate);
+        } else {
+            message.append("\n\n아직 획득하지 않았습니다.");
+        }
 
-      //다이얼로그 표시
-      new AlertDialog.Builder(this)
-              .setTitle(title + " (" + tierText + ")")
-              .setMessage(message.toString())
-              .setPositiveButton("확인", null)
-              .show();
-  }
+        //다이얼로그 표시
+        new AlertDialog.Builder(this)
+                .setTitle(title + " (" + tierText + ")")
+                .setMessage(message.toString())
+                .setPositiveButton("확인", null)
+                .show();
+    }
 
 
     //배지별 이름과 설명 매핑

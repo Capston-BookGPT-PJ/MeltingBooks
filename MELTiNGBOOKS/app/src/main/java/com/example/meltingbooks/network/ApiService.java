@@ -196,4 +196,9 @@ public interface ApiService {
             @Query("userId") int userId
     );
 
+    // 전체 리뷰 조회 (책 제한 없음)
+    @GET("/api/reviews")
+    Call<ApiResponse<List<FeedResponse>>> getAllReviews(
+            @Header("Authorization") String token
+    );
 }
