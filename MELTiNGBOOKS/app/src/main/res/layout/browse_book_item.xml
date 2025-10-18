@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <!-- 인기 책 텍스트 (좌측 상단) -->
+    <TextView
+        android:id="@+id/bookLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="인기 책"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+
+    <!-- 책 표지 이미지 (가운데 정렬) -->
+    <ImageView
+        android:id="@+id/bookCoverImage"
+        android:layout_width="300dp"
+        android:layout_height="380dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/bookLabel"/>
+</RelativeLayout>

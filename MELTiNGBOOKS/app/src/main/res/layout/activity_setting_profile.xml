@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp">
+
+        <!-- 상단 제목과 버튼 행 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/ProfileSetTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="프로필 설정"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/bnt_setting_save"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:text="설정 저장"
+                android:textColor="@color/black"
+                android:backgroundTint="#DFF1FF"
+                android:textSize="16sp"
+                android:background="@drawable/round_background_15"
+                android:gravity="center"
+                android:padding="0dp"/>
+        </LinearLayout>
+
+        <!--이름 -->
+        <TextView
+            android:id="@+id/NicknameTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="닉네임"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:layout_marginTop="24dp" />
+
+        <EditText
+            android:id="@+id/NicknameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="이름 입력"
+            android:background="@drawable/edittext_background"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+
+        <!--태그 아이디-->
+        <TextView
+            android:id="@+id/UserIDTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="태그 아이디"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:layout_marginTop="18dp" />
+
+        <EditText
+            android:id="@+id/UserIDEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" 영문자, 숫자, 마침표, 밑줄만 포함"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittext_background"
+            android:padding="8dp" />
+
+        <!-- 소개글 -->
+        <TextView
+            android:id="@+id/BioTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="소개글"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/BioEditText"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:hint="그룹 소개글을 작성 (200자 이하)"
+            android:gravity="top"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:inputType="textMultiLine"
+            android:maxLength="500"
+            android:layout_marginTop="12dp"/>
+
+        <!-- 프로필 이미지 -->
+        <TextView
+            android:id="@+id/Profile_img_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="프로필 이미지"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:layout_marginTop="20dp" />
+
+        <ImageButton
+            android:id="@+id/bnt_ProfileImage"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@drawable/get_img"
+            android:padding="5dp"
+            android:layout_marginTop="12dp"/>
+
+        <!-- 이미지 업로드 -->
+        <ImageView
+            android:id="@+id/profile_imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:scaleType="centerCrop" />
+
+
+        <!-- 배경 이미지 -->
+        <TextView
+            android:id="@+id/Background_ima_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="배경 이미지 추후 추가"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:layout_marginTop="20dp" />
+
+        <ImageButton
+            android:id="@+id/bnt_BackgroundImage"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@drawable/get_img"
+            android:padding="5dp"
+            android:layout_marginTop="12dp"/>
+
+        <!-- 이미지 업로드 -->
+        <ImageView
+            android:id="@+id/Background_imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+</ScrollView>

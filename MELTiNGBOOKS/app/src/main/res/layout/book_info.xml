@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bookSearchInfoContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- 책 제목 입력 + 돋보기 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/underline_background"
+        android:layout_marginBottom="8dp">
+
+        <EditText
+            android:id="@+id/etBookTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="책 제목을 입력하세요"
+            android:textColorHint="#888888"
+            android:textColor="@color/textColor"
+            android:background="@drawable/edittext_background"
+            android:padding="8dp"
+            android:textSize="18sp"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/searchBook"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/browse_search"
+            android:contentDescription="책 검색"
+            android:clickable="true"
+            android:focusable="true"/>
+
+
+    </LinearLayout>
+
+    <!-- 검색 결과 RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSearchResults"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <!-- 내용 영역 -->
+    <LinearLayout
+        android:id="@+id/bookInfoSelected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/bookCover"
+            android:layout_width="80dp"
+            android:layout_height="110dp"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/edittext_background"
+            android:contentDescription="책 이미지" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bookInfoTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="책 제목"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#222222" />
+
+            <TextView
+                android:id="@+id/bookInfoAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="저자"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:paddingTop="4dp" />
+
+            <TextView
+                android:id="@+id/bookInfoPublisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="출판사"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:paddingTop="2dp" />
+
+            <TextView
+                android:id="@+id/bookInfoCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="장르"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:paddingTop="2dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 구분선 -->
+    <View
+        android:id="@+id/bottom_divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#DDDDDD"
+        android:layout_marginTop="12dp" />
+
+
+</LinearLayout>

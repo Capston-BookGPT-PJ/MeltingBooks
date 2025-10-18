@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp">
+
+        <!-- 상단 제목과 버튼 행 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="앱 설정"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+
+        <!-- 구분선 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"/>
+        <!--계정/보안 -->
+        <TextView
+            android:id="@+id/groupNameLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="계정/보안"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+             />
+
+        <!-- 구분선 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!--알림 설정-->
+        <TextView
+            android:id="@+id/categoryLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="알림 설정"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+           />
+
+        <!-- 구분선 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- 개인정보 / 공개 범위 -->
+        <TextView
+            android:id="@+id/groupIntroLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="개인정보/공개 범위"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            />
+        <!-- 구분선 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+
+        <!-- 앱 환경-->
+        <TextView
+            android:id="@+id/Profile_img_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="앱 환경"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+             />
+
+        <!-- 구분선 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!--고객 지원 -->
+        <TextView
+            android:id="@+id/Background_ima_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="고객 지원"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+             />
+
+        <!-- 구분선 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/groupFeedLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/feed_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bar_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:src="@drawable/menu"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="12dp"
+            app:layout_constraintVertical_bias="0.5"/>
+
+        <TextView
+            android:id="@+id/groupTitle"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="그룹명"
+            android:textSize="18sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toEndOf="@id/menuButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="12dp"
+            app:layout_constraintVertical_bias="0.5"/>
+
+        <ImageView
+            android:id="@+id/topBarImage"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/meltingbooks_toplog"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/groupWrite"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:background="@null"
+            android:padding="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/feed_post"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.5"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    <!-- 중간 콘텐츠 영역 (스크롤 가능 영역) -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/groupScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/GroupContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/transparency"
+            android:padding="5dp">
+
+            <!-- 공지 -->
+            <LinearLayout
+                android:id="@+id/noticeBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/round_background_15"
+                android:padding="12dp"
+                android:layout_margin="12dp">
+
+                <!-- 📢 그룹 공지 + 등록 버튼 나란히 배치 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="📢 그룹 공지"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/textColor" />
+
+                    <ImageButton
+                        android:id="@+id/noticeSubmitButton"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="등록"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:minWidth="60dp"
+                        android:background="@drawable/write_upload"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+                <!-- 공지 제목 -->
+                <EditText
+                    android:id="@+id/noticeTitleEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="공지 제목을 입력하세요"
+                    android:background="@null"
+                    android:textSize="13sp"
+                    android:textColor="@color/textColor"
+                    android:inputType="text"
+                    android:paddingVertical="4dp" />
+
+                <!-- 공지 내용 -->
+                <EditText
+                    android:id="@+id/noticeContentEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="공지 내용을 입력하세요"
+                    android:background="@null"
+                    android:textSize="13sp"
+                    android:textColor="@color/textColor"
+                    android:inputType="textMultiLine"
+                    android:paddingVertical="2dp" />
+
+            </LinearLayout>
+
+            <!-- 이달의 추천 도서 -->
+            <LinearLayout
+                android:id="@+id/recommendBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/round_background_15"
+                android:padding="12dp"
+                android:layout_margin="12dp">
+
+                <!-- 📚 이달의 추천 도서 + 등록 버튼 나란히 배치 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="📚 이달의 추천 도서"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/textColor" />
+
+                    <ImageButton
+                        android:id="@+id/recommendSubmitButton"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:text="등록"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:minWidth="60dp"
+                        android:background="@drawable/write_upload"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+                <!-- 추천 도서 제목 -->
+                <EditText
+                    android:id="@+id/recommendTitleEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="도서 제목을 입력하세요"
+                    android:background="@null"
+                    android:textSize="13sp"
+                    android:textColor="@color/textColor"
+                    android:inputType="text"
+                    android:paddingVertical="4dp" />
+
+                <!-- 추천 도서 내용 -->
+                <EditText
+                    android:id="@+id/recommendContentEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="추천 이유를 입력하세요"
+                    android:background="@null"
+                    android:textSize="13sp"
+                    android:textColor="@color/textColor"
+                    android:inputType="textMultiLine"
+                    android:paddingVertical="2dp"
+                    />
+            </LinearLayout>
+
+
+            <!-- 기존 group_goal_container ConstraintLayout 대신 -->
+            <FrameLayout
+                android:id="@+id/group_goal_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/round_background_15"/>
+
+
+            <!--그룹 게시글-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/groupRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_background_15"
+                android:layout_margin="12dp"
+                android:clipToOutline="true"
+                android:padding="8dp"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"/>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <!-- 하단 메뉴바 보완필요 -->
+    <RelativeLayout
+        android:id="@+id/bottomNavigationLayout"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="11dp"
+        android:layout_marginHorizontal="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_background_20"/>
+
+        <ImageView
+            android:id="@+id/gradientCircle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/gra_cir_img" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/transparency"
+            app:itemIconTint="@drawable/nav_item_selector"
+            app:menu="@menu/bottom_nav_menu"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/feed_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/round_background_50_2"
+    android:visibility="gone"/>
+
+    <!-- 메뉴 영역 스크롤 가능하게 감싸기 -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/group_menu_button_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <include
+            layout="@layout/group_menu" />
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

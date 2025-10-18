@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp">
+
+        <!-- 상단 제목과 버튼 행 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="새 그룹 생성"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <ImageButton
+                android:id="@+id/createButton"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="@drawable/new_group_create_button" />
+        </LinearLayout>
+
+        <!-- 그룹 이름 -->
+        <TextView
+            android:id="@+id/groupNameLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="그룹 이름"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:layout_marginTop="24dp" />
+
+        <EditText
+            android:id="@+id/groupNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="그룹 이름을 작성 (3자 이상)"
+            android:background="@drawable/edittext_background"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- 그룹 카테고리 -->
+        <TextView
+            android:id="@+id/categoryLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="그룹 카테고리"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:layout_marginTop="18dp" />
+
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 대분류 Spinner -->
+            <Spinner
+                android:id="@+id/spinnerMainCategory"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:background="@drawable/edittext_background"
+                android:spinnerMode="dropdown" />
+
+            <!-- 세부 분류 Spinner -->
+            <Spinner
+                android:id="@+id/spinnerSubCategory"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:background="@drawable/edittext_background"
+                android:spinnerMode="dropdown"
+                android:layout_marginTop="12dp"
+                android:visibility="gone"/>
+
+            <!-- 자유 주제 입력 -->
+            <EditText
+                android:id="@+id/etCustomTopic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="카테고리 직접 입력하기"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edittext_background"
+                android:padding="8dp" />
+        </LinearLayout>
+
+        <!-- 그룹 소개글 -->
+        <TextView
+            android:id="@+id/groupIntroLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="그룹 소개글"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:id="@+id/groupIntroEditText"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:hint="그룹 소개글을 작성 (500자 이하)"
+            android:gravity="top"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:inputType="textMultiLine"
+            android:maxLength="500"
+            android:layout_marginTop="12dp"/>
+
+        <!-- 그룹 대표 이미지 -->
+        <TextView
+            android:id="@+id/groupProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="그룹 대표 이미지"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            android:layout_marginTop="20dp" />
+
+        <ImageButton
+            android:id="@+id/groupProfileImage"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@drawable/get_img"
+            android:padding="5dp"
+            android:layout_marginTop="12dp"/>
+
+        <!-- 이미지 업로드 -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+</ScrollView>

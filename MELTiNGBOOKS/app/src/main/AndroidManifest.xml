@@ -1,0 +1,113 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 권한 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/meltingbooks_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MeltingBooks"
+        tools:targetApi="31"
+        android:usesCleartextTraffic="true"
+        >
+
+        <!-- 시작점 (스타트 → 스플래시 → 로그인) -->
+        <activity android:name=".login.StartActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".login.LoginActivity" android:exported="true">
+            <intent-filter android:label="login">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="meltingbooks"
+                    android:host="callback" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".login.SignupActivity" android:exported="true"/>
+
+        <!-- 구글 로그인 콜백 Activity -->
+        <activity android:name=".login.GoogleLoginCallbackActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- 백엔드에 등록한 redirect_uri 스킴 -->
+                <data android:scheme="meltingbooks" android:host="callback" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- 카카오 로그인 콜백 Activity -->
+        <activity android:name=".login.KakaoLoginCallbackActivity"  android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <!-- 서버에서 redirect 시킬 custom scheme 등록 -->
+                <data
+                    android:scheme="meltingbooks" android:host="callback" />
+            </intent-filter>
+        </activity>
+
+        <!--네이버 로그인-->
+        <activity android:name=".login.NaverLoginCallbackActivity"  android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <!-- 서버에서 redirect 시킬 custom scheme 등록 -->
+                <data
+                    android:scheme="meltingbooks" android:host="callback" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".login.SplashActivity" android:exported="true"/>
+
+        <!-- 기존의 MainActivity 설정 -->
+        <activity android:name=".feed.FeedActivity" android:windowSoftInputMode="adjustResize" android:exported="true"/>
+        <activity android:name=".feed.FeedWriteActivity" android:windowSoftInputMode="adjustResize" android:exported="true"/>
+        <activity android:name=".browse.BrowseActivity" android:windowSoftInputMode="adjustResize" android:exported="true"/>
+
+        <!--피드 액티비티-->
+        <activity android:name=".feed.FeedDetailActivity" android:windowSoftInputMode="adjustResize" android:exported="true"/>
+
+        <!-- 캘린더 액티비티 -->
+        <activity android:name=".calendar.CalendarActivity" android:windowSoftInputMode="adjustPan"/>
+
+        <!-- 프로필 액티비티 -->
+        <activity android:name=".profile.ProfileActivity" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".profile.SettingProfile" android:windowSoftInputMode="adjustResize" android:exported="true"/>
+        <activity android:name=".profile.SettingApp" android:windowSoftInputMode="adjustResize" android:exported="true"/>
+        <activity android:name=".profile.FollowListActivity" android:windowSoftInputMode="adjustResize" android:exported="true"/>
+
+        <!-- 그룹 관련 액티비티 -->
+        <activity android:name=".group.GroupFeedActivity" android:windowSoftInputMode="adjustResize" android:exported="true"/>
+        <activity android:name=".group.write.GroupWriteActivity" android:windowSoftInputMode="adjustResize" android:exported="true"/>
+        <activity android:name=".group.GroupActivity" android:windowSoftInputMode="adjustResize" android:exported="true"/>
+        <activity android:name=".group.profile.GroupCreateActivity" android:windowSoftInputMode="adjustResize" android:exported="true"/>
+        <activity android:name=".group.profile.GroupProfileActivity" android:windowSoftInputMode="adjustResize" android:exported="true"/>
+        <activity android:name=".group.profile.GroupUpdateActivity" android:windowSoftInputMode="adjustResize" android:exported="true"/>
+        <activity android:name=".group.GroupDetailActivity" android:windowSoftInputMode="adjustResize" android:exported="true"/>
+        <activity android:name=".search.SearchActivity" android:windowSoftInputMode="adjustResize" android:exported="true"/>
+
+    </application>
+</manifest>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--투명 배경-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#00FFFFFF" />  <!-- Opacity 80% (CC) + White (#FFFFFF) -->
+</shape>

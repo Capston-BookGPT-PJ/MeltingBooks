@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 하단 툴바 각각 아이콘 디자인-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Feed"
+        android:icon="@drawable/main_feed"
+        android:title="" />
+
+    <item
+        android:id="@+id/Browser"
+        android:icon="@drawable/main_browser"
+        android:title="" />
+
+    <item
+        android:id="@+id/Calendar"
+        android:icon="@drawable/main_calendar"
+        android:title="" />
+
+    <item
+        android:id="@+id/Group"
+        android:icon="@drawable/main_group"
+        android:title="" />
+
+
+    <item
+        android:id="@+id/Profile"
+        android:icon="@drawable/sample_profile_dark"
+        android:title="" />
+
+</menu>

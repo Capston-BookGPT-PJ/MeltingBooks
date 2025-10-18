@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--스크롤 가능-->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <!--가운데 내용 부분-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/topBar">
+
+            <!-- 연간 / 월간 버튼 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="8dp"
+                android:gravity="center"
+                android:elevation="6dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/round_background_20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/topBar"
+
+                >
+
+                <TextView
+                    android:id="@+id/set_goal_monthly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="월간"
+                    android:textSize="14sp"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/setgoal_my_selector"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:stateListAnimator="@null"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="16dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:background="#4D000000"/>
+
+                <TextView
+                    android:id="@+id/set_goal_yearly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="연간"
+                    android:textSize="14sp"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/setgoal_my_selector"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:stateListAnimator="@null"/>
+            </LinearLayout>
+
+            <!--목표 영역-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/goal_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_background_12"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp">
+
+                <!-- 상단 제목 -->
+                <TextView
+                    android:id="@+id/reading_goal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/reading_goal"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    />
+
+                <!-- 목표 설정/수정 버튼 -->
+                <TextView
+                    android:id="@+id/btn_set_goal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="목표 설정"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:background="@drawable/round_background_20"
+                    android:backgroundTint="#A6FFBCE1"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/cheer_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="지금까지 잘해왔어요! 남은 절반도 화이팅! 💪"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    app:layout_constraintTop_toBottomOf="@id/reading_goal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:background="@drawable/round_background_8"
+                    android:backgroundTint="#DDDDDD"/>
+
+
+                <!-- 좌측 원형 목표 -->
+                <RelativeLayout
+                    android:id="@+id/circle_group"
+                    android:layout_width="158dp"
+                    android:layout_height="156dp"
+                    app:layout_constraintTop_toBottomOf="@id/cheer_message"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginStart="20dp">
+
+                    <ImageView
+                        android:id="@+id/ellipse_goal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ellipse_goal" />
+
+
+                    <!--진행률 원-->
+                    <com.example.meltingbooks.calendar.view.CircularProgressView
+                        android:id="@+id/circle_progress"
+                        android:layout_width="142dp"
+                        android:layout_height="142dp"
+                        android:layout_alignTop="@id/ellipse_goal"
+                        android:layout_alignStart="@id/ellipse_goal"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@android:color/transparent"/>
+
+                </RelativeLayout>
+
+
+                <!-- 목표 1 -->
+                <com.example.meltingbooks.calendar.view.GoalProgressView
+                    android:id="@+id/goal1_view"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/circle_group"
+                    app:layout_constraintStart_toEndOf="@id/circle_group"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="8dp"
+                    app:goalTitle="@string/goal1"
+                    app:goalTitleTextSize="18sp"
+                    app:goalUnit="권"
+                    app:progressDrawable="@drawable/progress_fill_background1" />
+
+                <!-- 목표 2 -->
+                <com.example.meltingbooks.calendar.view.GoalProgressView
+                    android:id="@+id/goal2_view"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/goal1_view"
+                    app:layout_constraintStart_toStartOf="@id/goal1_view"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="8dp"
+                    app:goalTitle="@string/goal2"
+                    app:goalTitleTextSize="18sp"
+                    app:goalUnit="개"
+                    app:progressDrawable="@drawable/progress_fill_background2" />
+
+                <!-- 목표 3 -->
+                <com.example.meltingbooks.calendar.view.GoalProgressView
+                    android:id="@+id/goal3_view"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/goal2_view"
+                    app:layout_constraintStart_toStartOf="@id/goal2_view"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="8dp"
+                    app:goalTitle="@string/goal3"
+                    app:goalTitleTextSize="18sp"
+                    app:goalUnit="시간"
+                    app:progressDrawable="@drawable/progress_fill_background3" />
+
+                <!--하단 여백-->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintTop_toBottomOf="@id/goal3_view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!--목표 영역 1(권수)-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/goal_number_books"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_background_12"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp">
+
+                <!-- 목표 1 -->
+                <com.example.meltingbooks.calendar.view.GoalProgressView
+                    android:id="@+id/goal1_view_detail"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="8dp"
+                    app:goalTitle="@string/goal1"
+                    app:goalTitleTextSize="18sp"
+                    app:goalUnit="권"
+                    app:progressDrawable="@drawable/progress_fill_background1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <!-- 책 선택 영역 -->
+                <LinearLayout
+                    android:id="@+id/book_image_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/goal1_view_detail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:clipChildren="false">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        android:scrollbars="none"
+                        android:clipChildren="false"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/book_list_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:clipChildren="false"
+                            />
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+                <!--하단 여백-->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/book_image_container"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--목표 영역 2(감상문 개수)-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/goal_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_background_12"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp">
+
+                <!-- 목표 2 -->
+                <com.example.meltingbooks.calendar.view.GoalProgressView
+                    android:id="@+id/goal2_view_detail"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="8dp"
+                    app:goalTitle="@string/goal2"
+                    app:goalTitleTextSize="18sp"
+                    app:goalUnit="개"
+                    app:progressDrawable="@drawable/progress_fill_background2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <!--하단 여백-->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/goal2_view_detail"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--목표 영역 3(독서 시간)-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/goal_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_background_12"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp">
+
+                <!-- 목표 3 -->
+                <com.example.meltingbooks.calendar.view.GoalProgressView
+                    android:id="@+id/goal3_view_detail"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="8dp"
+                    app:goalTitle="@string/goal3"
+                    app:goalTitleTextSize="18sp"
+                    app:goalUnit="시간"
+                    app:progressDrawable="@drawable/progress_fill_background3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+
+                <!-- 읽은 시간 그래프 영역 -->
+                <LinearLayout
+                    android:id="@+id/weekly_graph_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/goal3_view_detail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp">
+
+                    <com.github.mikephil.charting.charts.CombinedChart
+                        android:id="@+id/weekly_combined_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent" />
+
+                    <TextView
+                        android:id="@+id/chart_xText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="07/23"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+
+                    <!--android:background="@drawable/bg_selected_date"-->
+
+                </LinearLayout>
+
+                <!--하단 여백-->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/weekly_graph_container"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--하단 여백-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/goal_time"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

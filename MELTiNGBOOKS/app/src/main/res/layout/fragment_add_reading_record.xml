@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--스크롤 가능-->
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!--가운데 내용 부분-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/topBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/add_record_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_background_15_2"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:padding="12dp">
+
+                <!-- 이전 주 버튼 -->
+                <ImageButton
+                    android:id="@+id/btn_prev_week"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_line_arrow_left"
+                    android:contentDescription="Previous Week"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+                <!-- 요일 & 날짜를 표시할 LinearLayout -->
+                <LinearLayout
+                    android:id="@+id/week_date_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintStart_toEndOf="@id/btn_prev_week"
+                    app:layout_constraintEnd_toStartOf="@id/btn_next_week"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <!-- 다음 주 버튼 -->
+                <ImageButton
+                    android:id="@+id/btn_next_week"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_line_arrow_right"
+                    android:contentDescription="Next Week"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <!--기록 추가 영역-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/add_record_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_background_15_2"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                >
+
+                <!-- 상단 제목 -->
+                <TextView
+                    android:id="@+id/add_record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="독서 기록 추가"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"/>
+
+
+                <!-- 책 선택 영역 검색후 선택 검색창 만들기 -->
+
+
+                <!-- 회색 구분선 -->
+                <LinearLayout
+                    android:id="@+id/searchBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="10dp"
+                    android:elevation="4dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/add_record">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/bookPrompt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:text="📚어떤 책을 읽었나요?"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <CheckBox
+                            android:id="@+id/checkboxFinished"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/black"
+                            android:text="완독"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <!-- 책 정보 삽입 -->
+                    <include
+                        android:id="@+id/feedBookSearch"
+                        layout="@layout/book_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/searchBar" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/gray_line_1"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="#DDDDDD"
+                    app:layout_constraintTop_toBottomOf="@id/searchBar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- 읽은 페이지 수 -->
+                <LinearLayout
+                    android:id="@+id/page_input_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintTop_toBottomOf="@id/gray_line_1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📖 오늘은 몇 페이지 읽었나요? "
+                        android:textSize="16sp"
+                        android:textColor="@color/black"/>
+
+
+
+                    <EditText
+                        android:id="@+id/edit_page"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="0"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:textColorHint="#DDDDDD"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/text_total_page"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="p"
+                        android:textSize="16sp"
+                        android:layout_marginStart="4dp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <!-- 회색 구분선 -->
+                <View
+                    android:id="@+id/gray_line_2"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="#DDDDDD"
+                    app:layout_constraintTop_toBottomOf="@id/page_input_container"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- 읽은 시간 -->
+                <LinearLayout
+                    android:id="@+id/time_input_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintTop_toBottomOf="@id/gray_line_2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="@color/black">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⏳ 얼마 동안 읽었나요? "
+                        android:textSize="16sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/edit_hour"
+                        android:layout_width="35dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="0"
+                        android:gravity="center"
+                        android:background="@null"
+                        android:textSize="16sp"
+                        android:maxLength="2"
+                        android:textColorHint="#DDDDDD"
+                        android:textColor="@color/black"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="시간 "
+                        android:textSize="16sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/edit_minute"
+                        android:layout_width="35dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="0"
+                        android:gravity="center"
+                        android:background="@null"
+                        android:textSize="16sp"
+                        android:maxLength="2"
+                        android:textColorHint="#DDDDDD"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="분"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+                <!-- 회색 구분선 -->
+                <View
+                    android:id="@+id/gray_line_4"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="#DDDDDD"
+                    app:layout_constraintTop_toBottomOf="@id/time_input_container"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- 책 몇시쯤 읽었는지 표시 -->
+                <LinearLayout
+                    android:id="@+id/start_time_input_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintTop_toBottomOf="@id/gray_line_4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🕰️ 어느 시간에 읽었나요? "
+                        android:textSize="16sp"
+                        android:textColor="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <!-- 오전/오후 선택 Spinner -->
+                        <Spinner
+                            android:id="@+id/spinner_am_pm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/am_pm"
+                            android:prompt="@string/am_pm_prompt"
+                            android:spinnerMode="dropdown"
+                            />
+
+                        <EditText
+                            android:id="@+id/edit_start_hour"
+                            android:layout_width="35dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:hint="0"
+                            android:gravity="center"
+                            android:background="@null"
+                            android:textSize="16sp"
+                            android:maxLength="2"
+                            android:textColorHint="#DDDDDD"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="시 "
+                            android:textSize="16sp"
+                            android:textColor="@color/black"/>
+
+                        <EditText
+                            android:id="@+id/edit_start_minute"
+                            android:layout_width="35dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:hint="0"
+                            android:gravity="center"
+                            android:background="@null"
+                            android:textSize="16sp"
+                            android:maxLength="2"
+                            android:textColorHint="#DDDDDD"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="분"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 회색 구분선 -->
+                <View
+                    android:id="@+id/gray_line_3"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="#DDDDDD"
+                    app:layout_constraintTop_toBottomOf="@id/start_time_input_container"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- 목표 저장 버튼 버튼 -->
+                <TextView
+                    android:id="@+id/btn_delete_log"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="기존 기록 삭제"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:background="@drawable/round_background_20"
+                    android:backgroundTint="#A6FFBCE1"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_save_log"
+                    app:layout_constraintTop_toTopOf="@+id/gray_line_3"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- 목표 저장 버튼 버튼 -->
+                <TextView
+                    android:id="@+id/btn_save_log"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="기록 저장"
+                    android:textSize="14sp"
+                    android:textColor="#000000"
+                    android:background="@drawable/round_background_20"
+                    android:backgroundTint="#A6FFBCE1"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintTop_toTopOf="@+id/gray_line_3"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!--하단 여백-->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_save_log"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--하단 여백-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/add_record_container"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

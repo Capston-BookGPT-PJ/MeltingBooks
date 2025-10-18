@@ -1,0 +1,80 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/group_goal_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_background_15"
+    android:padding="8dp"
+    android:minHeight="150dp"
+    android:layout_margin="12dp">
+
+        <!-- 제목 -->
+        <TextView
+            android:id="@+id/group_reading_goal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="그룹 공통 독서 목표"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/group_arrow"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="10dp"/>
+
+        <!-- 화살표 아이콘 -->
+        <ImageView
+            android:id="@+id/group_arrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/arrow"
+            app:layout_constraintTop_toTopOf="@id/group_reading_goal"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- 목표 1 -->
+        <com.example.meltingbooks.group.goal.GroupGoalProgressView
+            android:id="@+id/goal1_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/group_reading_goal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            app:goalTitle="@string/goal1"
+            app:goalTitleTextSize="14sp"
+            app:goalUnit="권"
+            app:groupProgressDrawable="@drawable/progress_fill_background1" />
+
+        <!-- 목표 2 -->
+        <com.example.meltingbooks.group.goal.GroupGoalProgressView
+            android:id="@+id/goal2_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/goal1_view"
+            app:layout_constraintStart_toStartOf="@id/goal1_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="2dp"
+            app:goalTitle="@string/goal2"
+            app:goalTitleTextSize="14sp"
+            app:goalUnit="개"
+            app:groupProgressDrawable="@drawable/progress_fill_background2" />
+
+        <!-- 목표 3 -->
+        <com.example.meltingbooks.group.goal.GroupGoalProgressView
+            android:id="@+id/goal3_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/goal2_view"
+            app:layout_constraintStart_toStartOf="@id/goal2_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="2dp"
+            app:goalTitle="@string/goal3"
+            app:goalTitleTextSize="14sp"
+            app:goalUnit="시간"
+            app:groupProgressDrawable="@drawable/progress_fill_background3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

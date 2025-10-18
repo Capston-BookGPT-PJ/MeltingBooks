@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="25dp"
+    android:background="@drawable/round_background_15_2"
+    >
+
+    <TextView
+        android:id="@+id/hashtagTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="인기 해시태그"
+        android:textSize="22sp"
+        android:textColor="@color/black" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/hashtagFlexbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:flexWrap="wrap"
+        app:justifyContent="flex_start"
+        app:flexDirection="row"
+        app:alignItems="flex_start"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

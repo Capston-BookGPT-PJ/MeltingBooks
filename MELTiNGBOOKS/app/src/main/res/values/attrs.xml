@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GoalProgressView">
+        <attr name="goalTitle" format="string" />
+        <attr name="goalSubText" format="string" />
+        <attr name="progressDrawable" format="reference" />
+        <attr name="goalUnit" format="string" /> <!-- 권 / 개 / 시간 -->
+        <attr name="goalTitleTextSize" format="dimension" /><!--제목 크기-->
+    </declare-styleable>
+
+    <declare-styleable name="GroupGoalProgressView">
+        <attr name="groupGoalTitle" format="string" />
+        <attr name="groupGoalSubText" format="string" />
+        <attr name="groupProgressDrawable" format="reference" />
+        <attr name="groupGoalUnit" format="string" />
+        <attr name="groupGoalTitleTextSize" format="dimension" />
+    </declare-styleable>
+</resources>

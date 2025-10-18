@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 기본 색상 설정 -->
+    <color name="primaryColor">#6200EE</color>
+    <color name="primaryDarkColor">#3700B3</color>
+    <color name="accentColor">#03DAC5</color>
+    <!-- 투명색-->
+    <color name="transparency">#00FFFFFF</color>
+
+    <!-- 피그마에서 확인한 색상 추가 -->
+    <color name="backgroundColor">#F5F5F5</color>
+    <color name="textColor">#333333</color>
+    <color name="buttonColor">#FF5722</color>
+    <color name="cardBackground">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="hintColor">#888888</color>
+    <color name="text_blue">#1D9BF0</color>
+    <color name="gray">#F5F5F5</color>
+    <color name="babyblue">#D6F0FF</color>
+    <color name="red">#FF0000</color>
+
+</resources>

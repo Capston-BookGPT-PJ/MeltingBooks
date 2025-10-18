@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--하단 메뉴의 디자인-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#CCFFFFFF" />  <!-- Opacity 80% (CC) + White (#FFFFFF) -->
+    <corners android:radius="20dp" />
+</shape>

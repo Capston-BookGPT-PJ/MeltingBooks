@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white"
+    >
+    <!--android:background="@drawable/comment_background" 보류-->
+<!--댓글 제목-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="댓글"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        />
+
+    <!-- 댓글 목록 (RecyclerView로 구현) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commentRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <!-- 댓글 입력창 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:elevation="10dp"
+        android:background="@color/white"
+        >
+
+        <EditText
+            android:id="@+id/commentEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:hint="댓글을 작성하세요"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/textColor"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="5dp"
+            />
+
+        <ImageView
+             android:id="@+id/postCommentButton"
+             android:layout_width="38dp"
+             android:layout_height="38dp"
+             android:layout_margin="8dp"
+             android:background="@drawable/feed_comment"
+             android:clipToOutline="true"
+            />
+
+     </LinearLayout>
+ </LinearLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MeltingBooks</string>
+    <string name="reading_goal">목표 달성 현황</string>
+    <string name="goal_id">52%</string>
+    <string name="goal1">목표 권수</string>
+    <string name="goal__1">2권/3권</string>
+    <string name="goal2">목표 감상문</string>
+    <string name="goal__2">1개/3개</string>
+    <string name="goal3">목표 시간</string>
+    <string name="goal__3">4.5시간/15시간</string>
+</resources>
