@@ -88,11 +88,9 @@
 ```
 
 /MeltingBooks
-├─ app/                # Android 앱 소스코드
-├─ backend/            # 서버 코드
-├─ database/           # DB 스키마 및 시드 데이터
-├─ README.md           # 프로젝트 소개
-└─ docs/               # 프로젝트 문서 및 시연 자료
+├─ MELTiNGBOOKS/       # Android 앱 소스코드
+├─ Backend/            # 서버 코드
+└─ README.md           # 프로젝트 소개
 
 ```
 
