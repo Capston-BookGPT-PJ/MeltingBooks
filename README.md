@@ -1,7 +1,8 @@
-# <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/d125d03f-7263-4364-9e71-ade492a3db39" /> MeltingBooks
+# <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/2dc14ba1-b287-4fb4-b078-18b3514fe901" /> MeltingBooks
 
 
 <img width="500" height="500" alt="meltingbooks_log" src="https://github.com/user-attachments/assets/17c32f21-37e3-43c0-a5ae-7d61e9a03b08" />
+
 
 > 감상문 공유와 맞춤형 독서 관리로 꾸준한 독서 습관을 만들어주는 독서 관리 & SNS 커뮤니티 앱
 
