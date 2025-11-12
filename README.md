@@ -1,7 +1,7 @@
-# <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/2dc14ba1-b287-4fb4-b078-18b3514fe901" /> MeltingBooks
+<img width="1792" height="1024" alt="image" src="https://github.com/user-attachments/assets/60400304-471e-4cbf-a500-6202a843448e" /><img width="1792" height="1024" alt="image" src="https://github.com/user-attachments/assets/91f9ba6b-5a34-4dca-aab4-dbfa3fb861bb" /># <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/2dc14ba1-b287-4fb4-b078-18b3514fe901" /> MeltingBooks
 
 
-<img width="500" height="500" alt="meltingbooks_log" src="https://github.com/user-attachments/assets/17c32f21-37e3-43c0-a5ae-7d61e9a03b08" />
+<img width="500" height="500" alt="meltingbooks_log" src="https://github.com/user-attachments/assets/bc4b1713-c737-42af-897b-9cf6be87a080" />
 
 
 > 감상문 공유와 맞춤형 독서 관리로 꾸준한 독서 습관을 만들어주는 독서 관리 & SNS 커뮤니티 앱
@@ -17,7 +17,8 @@
 - 📖 감상문 공유로 꾸준한 독서 습관 지원  
 - ✍️ 감상문 작성 편의성과 기록 관리 제공  
 - 🏆 개인 맞춤 독서 리포트와 커뮤니티로 동기 부여
-<img width="500" height="250" alt="image" src="https://github.com/user-attachments/assets/7915cde9-3817-4096-b36e-b9242834d331" />
+<img width="500" height="250" alt="image" src="https://github.com/user-attachments/assets/47bf88fd-d7f3-4a53-b5a0-2f4e8476c3b9" />
+
 
 ---
 
@@ -29,9 +30,9 @@
 - 나만의 독서 로그 기록
 - 목표 설정 및 진행 현황 확인
 
-<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/c2d3647d-31a7-41d3-b42b-8b7312bd9ea4" />
-<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/cdbfdf48-49e8-42b4-b785-d844e01c6a89" />
-<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/d8a22d91-db5a-441f-bb8c-d553274298a1" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/e90d05a8-a479-4b71-9562-903e96e5a609" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/581596c4-0bd3-48b9-b212-3389d7d21ac9" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/bd4f9f66-bd68-4da1-acad-127ee1f3424b" />
 
 
 ---
@@ -41,9 +42,10 @@
 - 음성/텍스트 입력 지원
 - 댓글, 좋아요, 수정/삭제 지원
 
-<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/cf0d0b44-ed2c-45c9-a0b9-943fba7a9078" />
-<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/eb2e840a-f506-4628-b42e-3489ab504660" />
-<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/f33ebabc-1704-4f0c-9193-55424c2c89d2" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/0600ae80-e698-4d66-b55b-8226e46cc8d8" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/9421efd3-a930-43c4-8c3a-46ff5198b21c" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/a7e6c591-4895-4168-86e0-7c6097a21d64" />
+
 
 
 
