@@ -1,4 +1,4 @@
-<img width="1792" height="1024" alt="image" src="https://github.com/user-attachments/assets/60400304-471e-4cbf-a500-6202a843448e" /><img width="1792" height="1024" alt="image" src="https://github.com/user-attachments/assets/91f9ba6b-5a34-4dca-aab4-dbfa3fb861bb" /># <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/2dc14ba1-b287-4fb4-b078-18b3514fe901" /> MeltingBooks
+<img width="1792" height="1024" alt="image" src="https://github.com/user-attachments/assets/60400304-471e-4cbf-a500-6202a843448e" />
 
 
 <img width="500" height="500" alt="meltingbooks_log" src="https://github.com/user-attachments/assets/bc4b1713-c737-42af-897b-9cf6be87a080" />
