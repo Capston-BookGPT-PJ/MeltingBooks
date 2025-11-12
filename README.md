@@ -1,4 +1,4 @@
-# <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/96357a69-c6c3-4741-a6ef-23e3db6265fb" /> MeltingBooks
+<img width="1080" height="2201" alt="프로필1" src="https://github.com/user-attachments/assets/0bfc1563-601e-4355-8451-bce4aa717057" /># <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/96357a69-c6c3-4741-a6ef-23e3db6265fb" /> MeltingBooks
 
 
 <img width="500" height="500" alt="meltingbooks_log" src="https://github.com/user-attachments/assets/bc4b1713-c737-42af-897b-9cf6be87a080" />
@@ -31,8 +31,8 @@
 - 목표 설정 및 진행 현황 확인
 
 <img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/79b568bc-1511-4cf0-8d9b-d22da409fb30" />
-<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/581596c4-0bd3-48b9-b212-3389d7d21ac9" />
-<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/bd4f9f66-bd68-4da1-acad-127ee1f3424b" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/b297f16c-df0a-4e28-97d2-1e9c0b95f962" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/2c88f9c0-34b1-47f0-af87-2787475dae57" />
 
 
 ---
@@ -54,18 +54,22 @@
 ### 3️⃣ 커뮤니티 기능
 - 피드, 그룹, 팔로우로 소통
 
-<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/581100bc-10cb-4e3f-b106-79009f17a551" />
-<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/fac3852a-5bdd-4e15-b2df-f9ec8d307273" />
-<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/9e440767-e0e9-48be-8ef2-9bcabb3b1328" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/b29bdef1-f4cb-494e-98fb-9c6caca70c52" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/a848dadb-860c-4397-ac29-9fdc4ad467e6" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/61154dbb-d220-4424-b4b6-40445f8dac7d" />
+
 
 ---
 
-### 4️⃣ 독서 리포트
+### 4️⃣ 추천시스템과 독서 리포트
 - 독서 패턴과 성취 확인 가능
-- 차트와 통계 시각화 가능 (필요 시 GIF 활용)
+- 차트와 통계 시각화 가능
 
-<!-- 예시 GIF -->
-<!-- ![독서 리포트 예시](https://github.com/user-attachments/assets/xxxxxx.gif) -->
+<img width="250" height="650" alt="피드책추천" src="https://github.com/user-attachments/assets/751484a1-ff51-48eb-b3e1-61aa1f46df16" />
+<img width="250" height="650" alt="캘린더_리포트1" src="https://github.com/user-attachments/assets/f933c425-b406-496f-8998-6e4c405c1906" />
+<img width="250" height="650" alt="캘린더_리포트2" src="https://github.com/user-attachments/assets/63bb7c5f-83ac-409b-8689-ea5093eb2947" />
+
+
 
 ---
 
@@ -92,7 +96,8 @@
 
 /MeltingBooks
 ├─ MELTiNGBOOKS/       # Android 앱 소스코드
-├─ Backend/            # 서버 코드
+├─ backend/            # 서버 코드
+├─ RecommenderSystem/  # 추천시스템
 └─ README.md           # 프로젝트 소개
 
 ```
@@ -100,9 +105,9 @@
 ---
 
 ## 📌 사용 예시
-1. 독서 목표 등록 → 자동 리포트 생성  
-2. 감상문 작성 → 감정 기반 요약 지원  
-3. 그룹 피드 확인 → 다른 사용자와 소통, 좋아요/댓글 기능  
+1. 독서 목표 등록 및 독서 기록 → 사용자 독서 리듬 분석  
+2. 감상문 작성 → 음성 및 감정 기반 요약 지원  
+3. 피드 및 그룹 피드 확인 → 다른 사용자와 소통, 좋아요/댓글 기능  
 
 ---
 
@@ -114,7 +119,7 @@
 ---
 
 ## 📅 개발 기간
-- 2024.09 ~ 2025.10  
+- 2024.09 ~ 2025.11  
 
 ---
 
