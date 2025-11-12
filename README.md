@@ -1,4 +1,4 @@
-<img width="1080" height="2201" alt="프로필1" src="https://github.com/user-attachments/assets/0bfc1563-601e-4355-8451-bce4aa717057" /># <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/96357a69-c6c3-4741-a6ef-23e3db6265fb" /> MeltingBooks
+# <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/96357a69-c6c3-4741-a6ef-23e3db6265fb" /> MeltingBooks
 
 
 <img width="500" height="500" alt="meltingbooks_log" src="https://github.com/user-attachments/assets/bc4b1713-c737-42af-897b-9cf6be87a080" />
