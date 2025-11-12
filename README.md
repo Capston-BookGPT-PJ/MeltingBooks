@@ -30,7 +30,7 @@
 - 나만의 독서 로그 기록
 - 목표 설정 및 진행 현황 확인
 
-<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/e90d05a8-a479-4b71-9562-903e96e5a609" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/79b568bc-1511-4cf0-8d9b-d22da409fb30" />
 <img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/581596c4-0bd3-48b9-b212-3389d7d21ac9" />
 <img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/bd4f9f66-bd68-4da1-acad-127ee1f3424b" />
 
