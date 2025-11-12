@@ -42,11 +42,8 @@
 - 음성/텍스트 입력 지원
 - 댓글, 좋아요, 수정/삭제 지원
 
-<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/0600ae80-e698-4d66-b55b-8226e46cc8d8" />
-<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/9421efd3-a930-43c4-8c3a-46ff5198b21c" />
-<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/a7e6c591-4895-4168-86e0-7c6097a21d64" />
-
-
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/430b87e8-4ffe-40d0-878d-8b7bd04de3a8" />
+<img width="250" height="650" alt="image" src="https://github.com/user-attachments/assets/abc34fed-2e7b-456e-8c43-7937e5a57249" />
 
 
 ---
@@ -127,12 +124,12 @@
 
 <!-- 브론즈 티어 -->
 <p>
-  <img width="80" height="130" alt="감상문 공유 마스터_브론즈" src="https://github.com/user-attachments/assets/7c82c581-088f-418a-a25c-c1b3e866bb0c" />
-  <img width="80" height="130" alt="감상문 마스터_브론즈" src="https://github.com/user-attachments/assets/d52af128-dc31-4471-8aec-4bf39ab1acfb" />
-  <img width="80" height="130" alt="마라토너_브론즈" src="https://github.com/user-attachments/assets/3ab7c406-e143-4e82-b691-d989e4a3a6a3" />
-  <img width="80" height="130" alt="목표 마스터_브론즈" src="https://github.com/user-attachments/assets/7c9b6194-d1a8-41e9-b9a0-1dd711a56008" />
-  <img width="80" height="130" alt="완독_브론즈" src="https://github.com/user-attachments/assets/73cc9193-d1c3-4567-bdb2-37ab10cc8880" />
-  <img width="80" height="130" alt="장르 마스터_브론즈" src="https://github.com/user-attachments/assets/136123b1-5b9f-4ee9-b592-b6534e23fa2e" />
+  <img width="80" height="130" alt="감상문 공유 마스터_브론즈" src="https://github.com/user-attachments/assets/addfbcc2-a7b9-4c79-bae0-847fd6037574" />
+  <img width="80" height="130" alt="감상문 마스터_브론즈" src="https://github.com/user-attachments/assets/42aced32-7897-4f27-b1dd-91da99b89f03" />
+  <img width="80" height="130" alt="마라토너_브론즈" src="https://github.com/user-attachments/assets/e7a12a4d-6a4c-4f5b-92c5-5bc7e1cf9089" />
+  <img width="80" height="130" alt="목표 마스터_브론즈" src="https://github.com/user-attachments/assets/d7447f18-cf32-49cf-82d4-6786c75ce030" />
+  <img width="80" height="130" alt="완독_브론즈" src="https://github.com/user-attachments/assets/71521b25-d683-4f47-90be-fd4a76322bd7" />
+  <img width="80" height="130" alt="장르 마스터_브론즈" src="https://github.com/user-attachments/assets/e023fffa-4a73-40c8-a59e-96acd52bddd1" />
 </p>
 <p>감상문 공유 마스터_브론즈 | 감상문 마스터_브론즈 | 마라토너_브론즈 | 목표 마스터_브론즈 | 완독_브론즈 | 장르 마스터_브론즈</p>
 
@@ -140,12 +137,12 @@
 
 <!-- 실버 티어 -->
 <p>
-  <img width="80" height="130" alt="감상문 공유 마스터_실버" src="https://github.com/user-attachments/assets/140f37bf-6a64-4742-882b-0f0bcc753b10" />
-  <img width="80" height="130" alt="감상문 마스터_실버" src="https://github.com/user-attachments/assets/e717cfbd-4598-4ee0-b7d8-8d36bfd174ed" />
-  <img width="80" height="130" alt="마라토너_실버" src="https://github.com/user-attachments/assets/e603b0f3-1764-4bd4-b3f7-a398bc394653" />
-  <img width="80" height="130" alt="목표 마스터_실버" src="https://github.com/user-attachments/assets/cba39035-c3c1-4ad9-9402-9ddbb6220de2" />
-  <img width="80" height="130" alt="완독_실버" src="https://github.com/user-attachments/assets/ad5d14bd-1c88-4857-ad04-05aa98f6c147" />
-  <img width="80" height="130" alt="장르 마스터_실버" src="https://github.com/user-attachments/assets/9fa55424-6dfa-45da-aefe-308160a1587e" />
+  <img width="80" height="130" alt="감상문 공유 마스터_실버" src="https://github.com/user-attachments/assets/0faace76-134d-42a7-9b26-928dae4661a2" />
+  <img width="80" height="130" alt="감상문 마스터_실버" src="https://github.com/user-attachments/assets/e6e215f8-611d-47ab-a822-59232fc36fa5" />
+  <img width="80" height="130" alt="마라토너_실버" src="https://github.com/user-attachments/assets/80158329-a59f-4f61-93e0-c23e46738cb1" />
+  <img width="80" height="130" alt="목표 마스터_실버" src="https://github.com/user-attachments/assets/7c5cf515-7f1b-47a8-a544-d4d5663aae04" />
+  <img width="80" height="130" alt="완독_실버" src="https://github.com/user-attachments/assets/793cc7a5-8e94-42a9-9ed0-6a34e7726838" />
+  <img width="80" height="130" alt="장르 마스터_실버" src="https://github.com/user-attachments/assets/ad74449d-e82a-490d-842e-97f2146050ab" />
 </p>
 <p>감상문 공유 마스터_실버 | 감상문 마스터_실버 | 마라토너_실버 | 목표 마스터_실버 | 완독_실버 | 장르 마스터_실버</p>
 
@@ -153,12 +150,12 @@
 
 <!-- 골드 티어 -->
 <p>
-  <img width="80" height="130" alt="감상문 공유 마스터_골드" src="https://github.com/user-attachments/assets/242dc6be-edef-4d0e-ab6c-d3cb294157db" />
-  <img width="80" height="130" alt="감상문 마스터_골드" src="https://github.com/user-attachments/assets/fcdc5205-084a-4cfa-86d7-1437035345ed" />
-  <img width="80" height="130" alt="마라토너_골드" src="https://github.com/user-attachments/assets/91ce7ca6-3f07-49ef-9860-59ca14903b17" />
-  <img width="80" height="130" alt="목표 마스터_골드" src="https://github.com/user-attachments/assets/6940ffdb-fe98-4764-b07e-91c6f7e1e02a" />
-  <img width="80" height="130" alt="완독_골드" src="https://github.com/user-attachments/assets/6d1b3a79-b230-4a11-987d-33c953195fc7" />
-  <img width="80" height="130" alt="장르 마스터_골드" src="https://github.com/user-attachments/assets/9438fddc-ce66-43b0-8941-71cec60a00fa" />
+  <img width="80" height="130" alt="감상문 공유 마스터_골드" src="https://github.com/user-attachments/assets/b6d4fe25-dbea-4cee-a724-e9bf6159fd68" />
+  <img width="80" height="130" alt="감상문 마스터_골드" src="https://github.com/user-attachments/assets/448f7a94-67b8-4013-86cc-eefd59ce0e40" />
+  <img width="80" height="130" alt="마라토너_골드" src="https://github.com/user-attachments/assets/76173d9e-a5f2-4c91-8e30-ba9600c42b4b" />
+  <img width="80" height="130" alt="목표 마스터_골드" src="https://github.com/user-attachments/assets/2b9f669f-e478-425b-89f4-bb6ec7395157" />
+  <img width="80" height="130" alt="완독_골드" src="https://github.com/user-attachments/assets/a30e6b7a-c8db-45c3-908f-b3e99defcd69" />
+  <img width="80" height="130" alt="장르 마스터_골드" src="https://github.com/user-attachments/assets/03663f6a-4ded-4ff5-b70a-786a149622e7" />
 </p>
 <p>감상문 공유 마스터_골드 | 감상문 마스터_골드 | 마라토너_골드 | 목표 마스터_골드 | 완독_골드 | 장르 마스터_골드</p>
 
@@ -166,14 +163,15 @@
 
 <!-- 플래티넘 티어 -->
 <p>
-  <img width="100" height="150" alt="감상문 공유 마스터_플래티넘" src="https://github.com/user-attachments/assets/340a56c3-149e-42bb-be0d-5b872d964c05" />
-  <img width="100" height="150" alt="감상문 마스터_플래티넘" src="https://github.com/user-attachments/assets/088ff09a-c7d0-436d-960f-9d4e551d9ca4" />
-  <img width="100" height="150" alt="마라토너_플래티넘" src="https://github.com/user-attachments/assets/a903cac3-ba1b-497d-9a26-472a0ddf70de" />
-  <img width="100" height="150" alt="목표 마스터_플래티넘" src="https://github.com/user-attachments/assets/933377bd-9f0c-4a45-afd4-35c14e9063bc" />
-  <img width="100" height="150" alt="완독_플래티넘" src="https://github.com/user-attachments/assets/b78c83a6-0f48-46bb-ae9d-234e9976f13a" />
-  <img width="100" height="150" alt="장르 마스터_플래티넘" src="https://github.com/user-attachments/assets/fbcb86c4-27df-40d4-ab75-c3b9837120c0" />
+  <img width="100" height="150" alt="감상문 공유 마스터_플래티넘" src="https://github.com/user-attachments/assets/2c6b03fd-3213-491a-a2f8-85c21426e440" />
+  <img width="100" height="150" alt="감상문 마스터_플래티넘" src="https://github.com/user-attachments/assets/943c1fc7-9c40-4ac4-a3fd-7e7da8997746" />
+  <img width="100" height="150" alt="마라토너_플래티넘" src="https://github.com/user-attachments/assets/73d2c726-0ff2-4b58-862f-41da26c192a8" />
+  <img width="100" height="150" alt="목표 마스터_플래티넘" src="https://github.com/user-attachments/assets/42cd64af-8e25-4103-be5f-337fb5d79106" />
+  <img width="100" height="150" alt="완독_플래티넘" src="https://github.com/user-attachments/assets/887c2520-175e-4b3f-8c9c-0061d78fd50d" />
+  <img width="100" height="150" alt="장르 마스터_플래티넘" src="https://github.com/user-attachments/assets/2eb1d8c5-1c30-4f25-8769-0ee96ecb54a4" />
 </p>
 <p>감상문 공유 마스터_플래티넘 | 감상문 마스터_플래티넘 | 마라토너_플래티넘 | 목표 마스터_플래티넘 | 완독_플래티넘 | 장르 마스터_플래티넘</p>
+
 
 
 
