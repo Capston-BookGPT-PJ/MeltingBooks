@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/feedItemRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:elevation="10dp"
+    android:backgroundTint="@color/cardBackground"
+    app:shapeAppearanceOverlay="@style/RoundedCard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <!-- 상단 레이아웃 (프로필 사진, 사용자 이름, 리뷰 날짜) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- 프로필 사진 -->
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/sample_profile"
+                android:scaleType="centerCrop"
+                android:background="@drawable/profile_image_background"
+                android:clipToOutline="true"/>
+
+            <!-- 사용자 이름 -->
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:textSize="16sp"
+                android:textColor="@color/textColor"
+                android:layout_marginEnd="8dp"/>
+
+            <!-- 리뷰 날짜 (오른쪽 정렬) 나중에 몇시간 전에 올렸는지 얼마나 지나서 부터 날짜로 변경 할 건지 논의 필요-->
+            <TextView
+                android:id="@+id/reviewDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2025-03-08"
+                android:textSize="12sp"
+                android:textColor="@color/textColor"
+                android:layout_weight="1"
+                />
+
+            <!-- 공유 버튼  -->
+            <ImageView
+                android:id="@+id/share_Button"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp"
+                android:scaleType="centerCrop"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/feed_share_image"
+                android:clipToOutline="true"/>
+        </LinearLayout>
+
+        <!--피드 사진-->
+        <ImageView
+            android:id="@+id/feedImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/round_background_8"
+            android:clipToOutline="true"
+            />
+
+        <!-- 책 정보 -->
+        <include
+            android:id="@+id/bookInfoLayout"
+            layout="@layout/feed_book_info"
+            android:visibility="gone" />
+
+        <!-- 리뷰 내용 -->
+        <TextView
+            android:id="@+id/reviewContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is a sample review content."
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/textColor"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="10dp"/>
+
+        <!-- 해시태그 내용 -->
+        <TextView
+            android:id="@+id/hashtagContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/text_blue"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="10dp"/>
+
+        <!-- ✅constraint로 변경 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <!-- 댓글 버튼 -->
+            <ImageView
+                android:id="@+id/comment_button"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="0dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/feed_comment"
+                android:clipToOutline="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <!-- 댓글 수 -->
+            <TextView
+                android:id="@+id/comment_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textSize="12sp"
+                android:textColor="@color/textColor"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@id/comment_button"
+                app:layout_constraintTop_toTopOf="@id/comment_button"
+                app:layout_constraintBottom_toBottomOf="@id/comment_button"/>
+
+            <!-- 좋아요 버튼 -->
+            <ImageView
+                android:id="@+id/like_Button"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/feed_like_button"
+                android:clipToOutline="true"
+                app:layout_constraintStart_toEndOf="@id/comment_count"
+                app:layout_constraintTop_toTopOf="@id/comment_button"
+                app:layout_constraintBottom_toBottomOf="@id/comment_button"/>
+
+            <!-- 좋아요 수 -->
+            <TextView
+                android:id="@+id/like_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textSize="12sp"
+                android:textColor="@color/textColor"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@id/like_Button"
+                app:layout_constraintTop_toTopOf="@id/like_Button"
+                app:layout_constraintBottom_toBottomOf="@id/like_Button"/>
+
+            <!-- 더보기 버튼 -->
+            <TextView
+                android:id="@+id/readMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="더보기"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/comment_button"
+                app:layout_constraintBottom_toBottomOf="@id/comment_button"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- 기본 앱 테마 -->
+    <style name="Theme.MeltingBooks" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- 피그마에서 사용하는 기본 색상들 적용 -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/accentColor</item>
+        <item name="android:statusBarColor">@color/primaryDarkColor</item>
+        <item name="android:windowBackground">@color/backgroundColor</item>
+    </style>
+
+    <!-- 텍스트 스타일 -->
+    <style name="FeedTitleText">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <!-- 버튼 스타일 -->
+    <style name="FeedButton">
+        <item name="android:backgroundTint">@color/buttonColor</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+</resources>

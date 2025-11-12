@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/browseLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/feed_background">
+
+    <!-- 상단 바 (고정) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_bar_background"
+        android:fitsSystemWindows="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 중앙 로고 -->
+        <ImageView
+            android:id="@+id/topBarImage"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/meltingbooks_toplog"
+            android:contentDescription="Top Logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- 오른쪽 검색 버튼 -->
+        <ImageButton
+            android:id="@+id/search"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:padding="12dp"
+            android:background="@null"
+            android:contentDescription="Search Button"
+            android:scaleType="fitCenter"
+            android:src="@drawable/browse_search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 스크롤 가능 영역 (카테고리 헤더 포함) -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 카테고리 헤더 (요청하신 그대로) -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/categoryHeader"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_white_border"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="1dp"
+                android:elevation="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="11dp"
+                android:layout_marginEnd="11dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <!-- 인기 책 -->
+                <TextView
+                    android:id="@+id/popularBooks"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="인기 책"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:paddingStart="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/seperator1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <!-- 구분선 1 -->
+                <View
+                    android:id="@+id/seperator1"
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:background="@color/bar"
+                    app:layout_constraintTop_toTopOf="@id/popularBooks"
+                    app:layout_constraintBottom_toBottomOf="@id/popularBooks"
+                    app:layout_constraintStart_toEndOf="@id/popularBooks"
+                    app:layout_constraintEnd_toStartOf="@id/popularTags"/>
+
+                <!-- 인기 해시태그 -->
+                <TextView
+                    android:id="@+id/popularTags"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="인기 해시태그"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    app:layout_constraintStart_toEndOf="@id/seperator1"
+                    app:layout_constraintEnd_toStartOf="@id/seperator2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <!-- 구분선 2 -->
+                <View
+                    android:id="@+id/seperator2"
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:background="@color/bar"
+                    app:layout_constraintTop_toTopOf="@id/popularTags"
+                    app:layout_constraintBottom_toBottomOf="@id/popularTags"
+                    app:layout_constraintStart_toEndOf="@id/popularTags"
+                    app:layout_constraintEnd_toStartOf="@id/popularUsers"/>
+
+                <!-- 인기 사용자 -->
+                <TextView
+                    android:id="@+id/popularUsers"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="인기 사용자"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    app:layout_constraintStart_toEndOf="@id/seperator2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 중간 콘텐츠 영역 -->
+            <LinearLayout
+                android:id="@+id/BrowseContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/round_background_15_2"
+                android:backgroundTint="#94FFFFFF"
+                android:layout_margin="12dp">
+
+                <!-- 인기 책 + 리뷰 섹션 -->
+                <LinearLayout
+                    android:id="@+id/booksAndReviewsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/round_background_15_2"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginBottom="12dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/popularBooksTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="인기 책"
+                        android:textSize="22sp"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="8dp"/>
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/bookViewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="470dp"
+                        android:clipToPadding="false"
+                        android:clipChildren="false"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:overScrollMode="never" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/reviewRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginEnd="13dp"
+                        android:nestedScrollingEnabled="false" />
+                </LinearLayout>
+
+                <!-- 인기 해시태그 섹션 -->
+                <LinearLayout
+                    android:id="@+id/hashtagsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:background="@drawable/round_background_15_2"
+                    android:layout_marginBottom="12dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/popularHashtagsTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="인기 해시태그"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="25dp"
+                        android:textSize="22sp"
+                        android:textColor="@color/black" />
+
+                    <include
+                        android:id="@+id/hashtagLayout"
+                        layout="@layout/browse_hashtag_item" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/hashtagRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:nestedScrollingEnabled="false" />
+                </LinearLayout>
+
+                <!-- 인기 사용자 섹션 -->
+                <LinearLayout
+                    android:id="@+id/usersLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:background="@drawable/round_background_15_2"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/popularUsersTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="인기 사용자"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="25dp"
+                        android:textSize="22sp"
+                        android:textColor="@color/black" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/popularUsersRecyclerView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clipToPadding="false" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- 하단 메뉴바 -->
+    <RelativeLayout
+        android:id="@+id/bottomNavigationLayout"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="11dp"
+        android:layout_marginHorizontal="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_background_20"/>
+
+        <ImageView
+            android:id="@+id/gradientCircle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/gra_cir_img" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/transparency"
+            app:itemIconTint="@drawable/nav_item_selector"
+            app:menu="@menu/bottom_nav_menu"
+            app:labelVisibilityMode="unlabeled"
+            />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

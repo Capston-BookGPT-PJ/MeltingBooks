@@ -1,0 +1,113 @@
+<resources>
+    <string name="app_name">MeltingBooks</string>
+    <string name="reading_goal">목표 달성 현황</string>
+    <string name="goal_id">52%</string>
+    <string name="goal1">목표 권수</string>
+    <string name="goal__1">2권/3권</string>
+    <string name="goal2">목표 감상문</string>
+    <string name="goal__2">1개/3개</string>
+    <string name="goal3">목표 시간</string>
+    <string name="goal__3">4.5시간/15시간</string>
+
+    <!--독서 새 그룹 만들기 카테고리-->
+    <!-- 대분류 -->
+    <string-array name="group_category_main">
+        <item>카테고리 선택하기</item>
+        <item>장르</item>
+        <item>목적</item>
+        <item>관심사</item>
+    </string-array>
+
+    <!-- 장르 세부 분류 -->
+    <string-array name="group_category_genre">
+        <item>소설</item>
+        <item>비소설</item>
+        <item>에세이/시집</item>
+        <item>기타</item>
+    </string-array>
+
+    <!-- 목적 세부 분류 -->
+    <string-array name="group_category_purpose">
+        <item>시험/자격증 준비</item>
+        <item>직무/커리어 향상</item>
+        <item>문화/예술 탐구</item>
+        <item>독서 목표 달성</item>
+        <item>토론</item>
+        <item>기타</item>
+    </string-array>
+
+    <!-- 관심사 세부 분류 -->
+    <string-array name="group_category_interest">
+        <item>환경</item>
+        <item>심리학</item>
+        <item>여행/세계문화</item>
+        <item>기타</item>
+    </string-array>
+
+
+    <!--⭐이용약관 개인정보 처리 방침 추가-->
+    <string name="terms_and_policy">
+    <![CDATA[
+    ### 이용약관\n
+
+    제1조 목적\n
+    본 약관은 [MELTiNG BOOKS] (이하 “서비스”)의 이용과 관련하여 회사와 회원 간의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.\n
+    제2조 정의\n
+    1. “회원”이란 본 약관에 동의하고 서비스 이용계정을 부여받은 자를 말합니다.\n
+    2. “서비스”란 회사가 운영하는 모바일 애플리케이션 및 관련 웹 서비스를 의미합니다.\n
+    제3조 약관의 효력 및 변경\n
+    1. 본 약관은 회원이 동의한 시점부터 효력이 발생합니다.\n
+    2. 회사는 관련 법령을 위배하지 않는 범위에서 약관을 변경할 수 있으며, 변경된 약관은 공지 후 효력이 발생합니다.\n
+    제4조 회원가입 및 계정관리\n
+    1. 회원가입은 회원이 약관과 개인정보 처리방침에 동의하고, 필요한 정보를 입력한 후 회사가 이를 승인함으로써 성립합니다.\n
+    2. 회원은 계정 정보를 본인이 직접 관리해야 하며, 타인에게 양도하거나 대여할 수 없습니다.\n
+    제5조 서비스 이용\n
+    1. 회원은 본 약관 및 관련 법령을 준수하여 서비스를 이용해야 합니다.\n
+    2. 회사는 서비스 운영상 필요할 경우 서비스의 내용을 변경하거나 중단할 수 있습니다.\n
+    제6조 회원 탈퇴 및 이용제한\n
+    1. 회원은 언제든지 탈퇴를 신청할 수 있습니다.\n
+    2. 회사는 회원이 본 약관을 위반한 경우 서비스 이용을 제한할 수 있습니다.\n
+    제7조 면책\n
+    회사는 천재지변, 기술적 장애, 회원의 귀책사유로 발생한 손해에 대해 책임을 지지 않습니다.\n
+
+    ------------------------------\n
+
+    ### 개인정보 처리방침\n
+
+    1. 수집하는 개인정보 항목\n
+    - 회원가입 시: 이름, 이메일, 비밀번호, 닉네임\n
+    - 서비스 이용 시: 기기정보, 접속로그, 쿠키, 이용 기록\n
+
+    2. 개인정보의 수집 및 이용 목적\n
+    - 회원 식별 및 계정 관리\n
+    - 서비스 제공 및 맞춤형 콘텐츠 제공\n
+    - 서비스 개선 및 통계 분석\n
+    - 고객 상담 및 불만 처리\n
+
+    3. 개인정보의 보관 및 이용기간\n
+    - 회원 탈퇴 시 즉시 파기\n
+    - 관련 법령에 따라 일정 기간 보관이 필요한 경우, 해당 기간 동안 보관\n
+
+    4. 개인정보 제3자 제공\n
+    회사는 원칙적으로 개인정보를 외부에 제공하지 않습니다. 다만, 법령에 따라 필요한 경우에는 예외로 합니다.\n
+
+    5. 개인정보 처리 위탁\n
+    서비스 운영을 위해 필요한 경우 일부 업무를 외부 업체에 위탁할 수 있으며, 이 경우 사전에 공지합니다.\n
+
+    6. 개인정보 보호를 위한 노력\n
+    회사는 개인정보를 안전하게 관리하기 위하여 보안 시스템을 갖추고, 접근 권한을 최소화하고 있습니다.\n
+
+    7. 이용자의 권리\n
+    회원은 언제든지 자신의 개인정보를 열람, 수정, 삭제, 처리정지 등을 요청할 수 있습니다.
+        ]]>
+    </string>
+
+    <string-array name="am_pm">
+        <item>오전</item>
+        <item>오후</item>
+    </string-array>
+
+    <string name="am_pm_prompt">오전/오후 선택</string>
+
+
+</resources>

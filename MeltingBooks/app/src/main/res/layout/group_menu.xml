@@ -1,0 +1,120 @@
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/group_menu_button_layout"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/round_background_50_2">
+
+        <!-- 내 그룹 -->
+        <TextView
+            android:id="@+id/myGroupList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="40dp"
+            android:text="내 그룹"
+            android:layout_marginBottom="10dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor" />
+
+        <!-- 내 그룹 RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/myGroupRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginHorizontal="40dp"
+            android:padding="8dp"
+            android:background="@drawable/edittext_background" />
+
+        <!-- 그룹 생성 버튼
+        <ImageButton
+            android:id="@+id/group_create_join"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/group_join" />
+-->
+        <!-- 그룹 멤버 -->
+        <TextView
+            android:id="@+id/groupName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="40dp"
+            android:text="그룹 멤버"
+            android:textSize="14sp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/textColor" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/groupMemberRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginHorizontal="40dp"
+            android:padding="8dp"
+            android:background="@drawable/edittext_background" />
+
+        <!-- 그룹 가입 요청 -->
+        <TextView
+            android:id="@+id/groupJoin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="40dp"
+            android:text="그룹 가입 요청"
+            android:layout_marginBottom="10dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_blue" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/groupJoinRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginHorizontal="40dp"
+            android:padding="8dp"
+            android:background="@drawable/edittext_background" />
+
+        <!-- 탈퇴 버튼 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="30dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_leave_group"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:text="그룹 탈퇴하기"
+                android:textColor="#FF5252"
+                android:textSize="13dp"
+                android:backgroundTint="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_margin="5dp"
+                android:padding="8dp"
+                app:cornerRadius="8dp"
+                android:contentDescription="그룹탈퇴/삭제하기"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

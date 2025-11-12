@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--스크롤 가능-->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true">
+
+        <!--가운데 내용 부분-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/topBar">
+
+            <!--목표 영역-->
+
+            <!--하단 여백-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/goal_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/round_background_12"
+                android:paddingBottom="16dp">
+
+                <!-- 이전 달 버튼 -->
+                <ImageView
+                    android:id="@+id/btnPrev"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:src="@drawable/ic_line_arrow_left"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- 월 텍스트 -->
+                <TextView
+                    android:id="@+id/textMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="July 2025"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/btnPrev"
+                    app:layout_constraintEnd_toStartOf="@id/btnNext"
+                    app:layout_constraintStart_toEndOf="@id/btnPrev"
+                    app:layout_constraintTop_toTopOf="@id/btnPrev" />
+
+                <!-- 다음 달 버튼 -->
+                <ImageView
+                    android:id="@+id/btnNext"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@null"
+                    android:src="@drawable/ic_line_arrow_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- 상단 제목 -->
+                <TextView
+                    android:id="@+id/monthly_report_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="7월의 리포트 📊"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textMonth" />
+
+                <!-- 연간 / 월간 버튼 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="29dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/round_background_20"
+                    android:elevation="6dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textMonth">
+
+                    <TextView
+                        android:id="@+id/set_goal_monthly"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/setgoal_my_selector"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="4dp"
+                        android:stateListAnimator="@null"
+                        android:text="월간"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="16dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:background="#4D000000" />
+
+                    <TextView
+                        android:id="@+id/set_goal_yearly"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/setgoal_my_selector"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="4dp"
+                        android:stateListAnimator="@null"
+                        android:text="연간"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- 회색 구분선 -->
+                <View
+                    android:id="@+id/gray_line_1"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#DDDDDD"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/monthly_report_title" />
+
+
+                <TextView
+                    android:id="@+id/cheer_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="🚶시작이 반이에요, 다음 달엔 조금 더 도전해볼까요?"
+                    android:textColor="#000000"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/gray_line_1" />
+
+                <!-- 좌측 원형 목표 -->
+                <RelativeLayout
+                    android:id="@+id/circle_group"
+                    android:layout_width="158dp"
+                    android:layout_height="156dp"
+                    android:translationY="30dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="13dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cheer_message">
+
+                    <ImageView
+                        android:id="@+id/ellipse_goal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ellipse_goal" />
+
+
+                    <!--진행률 원-->
+                    <com.example.meltingbooks.calendar.view.CircularProgressView
+                        android:id="@+id/circle_progress"
+                        android:layout_width="142dp"
+                        android:layout_height="142dp"
+                        android:layout_alignStart="@id/ellipse_goal"
+                        android:layout_alignTop="@id/ellipse_goal"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/transparent" />
+
+                </RelativeLayout>
+
+
+                <!-- 목표 1 -->
+                <com.example.meltingbooks.calendar.view.GoalProgressView
+                    android:id="@+id/goal1_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="20dp"
+                    app:goalTitle="@string/goal1"
+                    app:goalTitleTextSize="18sp"
+                    app:goalUnit="권"
+                    app:layout_constraintStart_toEndOf="@id/circle_group"
+                    app:layout_constraintTop_toTopOf="@id/circle_group"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:progressDrawable="@drawable/progress_fill_background1" />
+
+                <!-- 목표 2 -->
+                <com.example.meltingbooks.calendar.view.GoalProgressView
+                    android:id="@+id/goal2_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="20dp"
+                    app:goalTitle="@string/goal2"
+                    app:goalTitleTextSize="18sp"
+                    app:goalUnit="개"
+                    app:layout_constraintStart_toStartOf="@id/goal1_view"
+                    app:layout_constraintTop_toBottomOf="@id/goal1_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:progressDrawable="@drawable/progress_fill_background2" />
+
+                <!-- 목표 3 -->
+                <com.example.meltingbooks.calendar.view.GoalProgressView
+                    android:id="@+id/goal3_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="20dp"
+                    app:goalTitle="@string/goal3"
+                    app:goalTitleTextSize="18sp"
+                    app:goalUnit="시간"
+                    app:layout_constraintStart_toStartOf="@id/goal2_view"
+                    app:layout_constraintTop_toBottomOf="@id/goal2_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:paddingBottom="10dp"
+                    app:progressDrawable="@drawable/progress_fill_background3" />
+
+
+                <!-- 회색 구분선 -->
+                <View
+                    android:id="@+id/gray_line_3"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#DDDDDD"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/goal3_view" />
+
+                <!-- 상단 제목 -->
+                <TextView
+                    android:id="@+id/book_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+                    android:text="읽은 책"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gray_line_3" />
+
+                <!-- 책 선택 -->
+                <LinearLayout
+                    android:id="@+id/book_image_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:clipChildren="false"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/book_title">
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipChildren="false"
+                        android:overScrollMode="never"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:id="@+id/book_list_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clipChildren="false"
+                            android:orientation="horizontal"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp" />
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+                <!-- 회색 구분선 -->
+                <View
+                    android:id="@+id/gray_line_4"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#DDDDDD"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/book_image_container" />
+
+                <!-- 상단 제목 -->
+                <TextView
+                    android:id="@+id/level_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+                    android:text="레벨 업 &amp; 배지"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gray_line_4" />
+
+                <LinearLayout
+                    android:id="@+id/badge_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/level_title" />
+
+                <!--누적 경헙치-->
+                <TextView
+                    android:id="@+id/experienceTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="누적 경험치: "
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/badge_container"/>
+
+                <TextView
+                    android:id="@+id/experienceNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="100 Point"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/experienceTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/badge_container"/>
+
+                <!--레벨-->
+                <TextView
+                    android:id="@+id/levelTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="12dp"
+                    android:text="레벨: "
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/experienceTitle"/>
+
+                <TextView
+                    android:id="@+id/levelNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="1 .Lv"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/levelTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/experienceTitle"/>
+
+                <View
+                    android:id="@+id/gray_line_5"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#DDDDDD"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/levelTitle" />
+
+                <!-- 상단 제목 -->
+                <TextView
+                    android:id="@+id/analysis_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+                    android:text="독서 통계"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gray_line_5" />
+                <!--통계량-->
+                <TextView
+                    android:id="@+id/totalPagesTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="읽은 전체 페이지: "
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/analysis_title"/>
+
+                <TextView
+                    android:id="@+id/totalPagesNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="100P"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/totalPagesTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/analysis_title"/>
+
+                <TextView
+                    android:id="@+id/totalMinutesTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="읽은 전체 시간: "
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/totalPagesTitle"/>
+
+                <TextView
+                    android:id="@+id/totalMinutesNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="100분"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/totalMinutesTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/totalPagesTitle"/>
+
+                <TextView
+                    android:id="@+id/completedReviewsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="작성한 리뷰 수: "
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/totalMinutesTitle"/>
+
+                <TextView
+                    android:id="@+id/completedReviewsNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="10개"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/completedReviewsTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/totalMinutesTitle"/>
+
+                <TextView
+                    android:id="@+id/averageDailyMinutesTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="일 평균 독서 시간: "
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/completedReviewsTitle"/>
+
+                <TextView
+                    android:id="@+id/averageDailyMinutesNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="100분"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/averageDailyMinutesTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/completedReviewsTitle"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--하단 여백-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/reading_rhythm_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/round_background_12"
+                android:paddingBottom="16dp">
+
+                <!-- 상단 제목 -->
+                <TextView
+                    android:id="@+id/reading_rhythm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+                    android:text="최근 독서 리듬 분석"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <!-- 가장 많이 읽은 시간대 -->
+                <TextView
+                    android:id="@+id/preferredPeriod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="가장 많이 읽은 시간대:"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/reading_rhythm" />
+
+                <TextView
+                    android:id="@+id/preferredPeriodNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="아침"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/preferredPeriod"
+                    app:layout_constraintTop_toTopOf="@+id/preferredPeriod" />
+
+                <!-- 가장 많이 읽는 시각 -->
+                <TextView
+                    android:id="@+id/preferredHour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:text="가장 집중하는 시간:"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/preferredPeriod" />
+
+                <TextView
+                    android:id="@+id/preferredHourNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="09시"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/preferredHour"
+                    app:layout_constraintTop_toTopOf="@+id/preferredHour" />
+
+                <!-- 평균 1회 독서 시간 -->
+                <TextView
+                    android:id="@+id/sessionMinutes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:text="평균 독서 시간:"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/preferredHour" />
+
+                <TextView
+                    android:id="@+id/sessionMinutesNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="55분"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/sessionMinutes"
+                    app:layout_constraintTop_toTopOf="@+id/sessionMinutes" />
+
+                <!-- 주 평균 독서일 수 -->
+                <TextView
+                    android:id="@+id/daysPerWeek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:text="주 평균 독서일:"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sessionMinutes" />
+
+                <TextView
+                    android:id="@+id/daysPerWeekNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="2일"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/daysPerWeek"
+                    app:layout_constraintTop_toTopOf="@+id/daysPerWeek" />
+
+                <!-- 주간 권장 독서 시간 -->
+                <TextView
+                    android:id="@+id/recommendedWeeklyMinutes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:text="주간 권장 독서 시간:"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/daysPerWeek" />
+
+                <TextView
+                    android:id="@+id/recommendedWeeklyMinutesNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="167분"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/recommendedWeeklyMinutes"
+                    app:layout_constraintTop_toTopOf="@+id/recommendedWeeklyMinutes" />
+
+                <!-- 마지막 독서 이후 경과일 -->
+                <TextView
+                    android:id="@+id/daysSinceLastRead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:text="마지막 독서 이후:"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recommendedWeeklyMinutes" />
+
+                <TextView
+                    android:id="@+id/daysSinceLastReadNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="9일 전"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/daysSinceLastRead"
+                    app:layout_constraintTop_toTopOf="@+id/daysSinceLastRead" />
+
+                <!-- 분석 생성일 -->
+                <TextView
+                    android:id="@+id/analysisDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:text="분석 생성일:"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/daysSinceLastRead" />
+
+                <TextView
+                    android:id="@+id/analysisDateNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="2025-11-02"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@+id/analysisDate"
+                    app:layout_constraintTop_toTopOf="@+id/analysisDate" />
+
+                <!-- 비활성 사용자 경고 -->
+                <TextView
+                    android:id="@+id/inactiveFlagText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="12dp"
+                    android:text="이번 주에는 독서를 재시작해볼까요? 📖"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/analysisDate" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/goal_container"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
