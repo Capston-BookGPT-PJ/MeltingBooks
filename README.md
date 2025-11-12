@@ -1,6 +1,3 @@
-<img width="1792" height="1024" alt="image" src="https://github.com/user-attachments/assets/60400304-471e-4cbf-a500-6202a843448e" />
-
-
 <img width="500" height="500" alt="meltingbooks_log" src="https://github.com/user-attachments/assets/bc4b1713-c737-42af-897b-9cf6be87a080" />
 
 
