@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/setting_fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp">
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="앱 설정"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- 계정 / 보안 -->
+            <TextView
+                android:id="@+id/accountSecurity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="계정 / 보안"
+                android:textSize="20sp"
+                android:textColor="@color/textColor"
+                android:paddingVertical="12dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="로그아웃"
+                android:textSize="16sp"
+                android:textColor="@color/textColor"
+                android:paddingVertical="8dp"
+                android:layout_marginStart="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/deleteAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="계정 탈퇴"
+                android:textSize="16sp"
+                android:textColor="@color/textColor"
+                android:paddingVertical="8dp"
+                android:layout_marginStart="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DDDDDD"/>
+
+            <!-- 알림 설정 -->
+            <TextView
+                android:id="@+id/notificationSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="알림 설정"
+                android:textSize="20sp"
+                android:textColor="@color/textColor"
+                android:paddingVertical="12dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/pushToggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="푸시 알림 on/off"
+                android:textSize="16sp"
+                android:textColor="@color/textColor"
+                android:paddingVertical="8dp"
+                android:layout_marginStart="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DDDDDD"/>
+
+            <!-- 고객 지원 -->
+            <TextView
+                android:id="@+id/support"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="고객 지원"
+                android:textSize="20sp"
+                android:textColor="@color/textColor"
+                android:paddingVertical="12dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="문의하기 / 피드백 보내기"
+                android:textSize="16sp"
+                android:textColor="@color/textColor"
+                android:paddingVertical="8dp"
+                android:layout_marginStart="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/versionInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="버전 정보"
+                android:textSize="16sp"
+                android:textColor="@color/textColor"
+                android:paddingVertical="8dp"
+                android:layout_marginStart="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="약관 및 개인정보 처리방침"
+                android:textSize="16sp"
+                android:textColor="@color/textColor"
+                android:paddingVertical="8dp"
+                android:layout_marginStart="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DDDDDD"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

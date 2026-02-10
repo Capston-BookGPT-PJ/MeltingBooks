@@ -1,0 +1,79 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bookInfoContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#F9F9F9"
+    android:padding="12dp">
+
+    <!-- 내용 영역 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/bookCover"
+            android:layout_width="80dp"
+            android:layout_height="110dp"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/edittext_background"
+            android:contentDescription="책 이미지" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bookInfoTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="책 제목"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#222222" />
+
+            <TextView
+                android:id="@+id/bookInfoAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="저자"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:paddingTop="4dp" />
+
+            <TextView
+                android:id="@+id/bookInfoPublisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="출판사"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:paddingTop="2dp" />
+
+            <TextView
+                android:id="@+id/bookInfoCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="장르"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:paddingTop="2dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 구분선 -->
+    <View
+        android:id="@+id/bottom_divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#DDDDDD"
+        android:layout_marginTop="12dp" />
+
+</LinearLayout>

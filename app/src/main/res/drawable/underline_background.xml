@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!-- 배경색 (흰색) -->
+<solid android:color="@color/transparency"/>
+    <!-- 전체 배경색 투명 -->
+    <solid android:color="@android:color/transparent" />
+
+    <!-- 아래쪽 테두리만 회색으로 -->
+    <size android:height="1dp" />
+    <stroke android:width="0dp"
+        android:color="@android:color/transparent" />
+    <padding android:bottom="1dp" />
+
+    <!-- 그림자 역할을 할 아래쪽 선 -->
+    <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:bottom="0dp">
+            <shape android:shape="rectangle">
+                <solid android:color="#CCCCCC" />
+                <size android:height="1dp" />
+            </shape>
+        </item>
+    </layer-list>
+</shape>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 그라데이션 원 img로 대체함 -->
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:startColor="#DFF1FF"
+                android:centerColor="#FFBCE1"
+                android:endColor="#E2BAF2"
+                android:angle="270"/>
+            <size android:width="50dp" android:height="50dp"/>
+        </shape>
+    </item>
+</layer-list>

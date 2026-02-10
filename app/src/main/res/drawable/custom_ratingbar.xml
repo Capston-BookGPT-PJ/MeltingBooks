@@ -1,0 +1,17 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 빈 별 -->
+    <item android:id="@android:id/background">
+        <bitmap
+            android:src="@drawable/star_empty"
+            android:tileMode="repeat"/>
+    </item>
+
+    <!-- 채워진 별 -->
+    <item android:id="@android:id/progress">
+        <clip android:clipOrientation="horizontal" android:gravity="left">
+            <bitmap
+                android:src="@drawable/star_filled"
+                android:tileMode="repeat"/>
+        </clip>
+    </item>
+</layer-list>
